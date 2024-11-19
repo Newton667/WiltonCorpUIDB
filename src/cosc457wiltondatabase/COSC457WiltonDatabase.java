@@ -4,12 +4,12 @@
  */
 package cosc457wiltondatabase;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.PreparedStatement;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.*;
 
 /**
  *
@@ -17,80 +17,239 @@ import java.sql.PreparedStatement;
  */
 public class COSC457WiltonDatabase {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            System.out.println(e);
-        }
+        SwingUtilities.invokeLater(() -> createAndShowMainGUI());
+    }
 
+    private static void createAndShowMainGUI() {
+        JFrame frame = new JFrame("Database Management");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.setLayout(new BorderLayout());
+
+        // Add Menu Bar
+        JMenuBar menuBar = new JMenuBar();
+
+        JMenu menu = new JMenu("Options");
+        JMenuItem officeMenuItem = new JMenuItem("Add Office");
+        JMenuItem employeeMenuItem = new JMenuItem("Add Employee");
+
+        menu.add(officeMenuItem);
+        menu.add(employeeMenuItem);
+        menuBar.add(menu);
+
+        frame.setJMenuBar(menuBar);
+
+        // Create main panel for initial page
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
+        JLabel welcomeLabel = new JLabel("Welcome to the Database Management System", SwingConstants.CENTER);
+        mainPanel.add(welcomeLabel, BorderLayout.CENTER);
+
+        frame.add(mainPanel, BorderLayout.CENTER);
+
+        // Event handling for menu items
+        officeMenuItem.addActionListener(e -> {
+            frame.getContentPane().removeAll();
+            frame.add(createOfficePanel(frame), BorderLayout.CENTER);
+            frame.revalidate();
+            frame.repaint();
+        });
+
+        employeeMenuItem.addActionListener(e -> {
+            frame.getContentPane().removeAll();
+            frame.add(createEmployeePanel(frame), BorderLayout.CENTER);
+            frame.revalidate();
+            frame.repaint();
+        });
+
+        frame.setVisible(true);
+    }
+
+    private static JPanel createOfficePanel(JFrame frame) {
+        JPanel panel = new JPanel(new GridLayout(6, 2, 10, 10));
+
+        JLabel idLabel = new JLabel("Office ID:");
+        JTextField idField = new JTextField();
+
+        JLabel fnameLabel = new JLabel("First Name:");
+        JTextField fnameField = new JTextField();
+
+        JLabel lnameLabel = new JLabel("Last Name:");
+        JTextField lnameField = new JTextField();
+
+        JLabel ssnLabel = new JLabel("SSN:");
+        JTextField ssnField = new JTextField();
+
+        JButton submitButton = new JButton("Submit");
+        JButton viewAllButton = new JButton("View All");
+
+        panel.add(idLabel);
+        panel.add(idField);
+        panel.add(fnameLabel);
+        panel.add(fnameField);
+        panel.add(lnameLabel);
+        panel.add(lnameField);
+        panel.add(ssnLabel);
+        panel.add(ssnField);
+        panel.add(submitButton);
+        panel.add(viewAllButton);
+
+        submitButton.addActionListener(e -> {
+            String idText = idField.getText();
+            String fname = fnameField.getText();
+            String lname = lnameField.getText();
+            String ssnText = ssnField.getText();
+
+            try {
+                int id = Integer.parseInt(idText);
+                int ssn = Integer.parseInt(ssnText);
+                insertIntoOffice(id, fname, lname, ssn);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(frame, "Please enter valid numbers for Office ID and SSN.");
+            }
+        });
+
+        viewAllButton.addActionListener(e -> {
+            String records = getAllOffices();
+            JOptionPane.showMessageDialog(frame, records, "All Offices", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        return panel;
+    }
+
+    private static JPanel createEmployeePanel(JFrame frame) {
+        JPanel panel = new JPanel(new GridLayout(5, 2, 10, 10));
+
+        JLabel empIdLabel = new JLabel("Employee ID:");
+        JTextField empIdField = new JTextField();
+
+        JLabel fnameLabel = new JLabel("First Name:");
+        JTextField fnameField = new JTextField();
+
+        JLabel lnameLabel = new JLabel("Last Name:");
+        JTextField lnameField = new JTextField();
+
+        JButton submitButton = new JButton("Submit");
+        JButton viewAllButton = new JButton("View All");
+
+        panel.add(empIdLabel);
+        panel.add(empIdField);
+        panel.add(fnameLabel);
+        panel.add(fnameField);
+        panel.add(lnameLabel);
+        panel.add(lnameField);
+        panel.add(submitButton);
+        panel.add(viewAllButton);
+
+        submitButton.addActionListener(e -> {
+            String empIdText = empIdField.getText();
+            String fname = fnameField.getText();
+            String lname = lnameField.getText();
+
+            try {
+                int empId = Integer.parseInt(empIdText);
+                insertIntoEmployee(empId, fname, lname);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(frame, "Please enter a valid number for Employee ID.");
+            }
+        });
+
+        viewAllButton.addActionListener(e -> {
+            String records = getAllEmployees();
+            JOptionPane.showMessageDialog(frame, records, "All Employees", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        return panel;
+    }
+
+    private static void insertIntoOffice(int idOffice, String fname, String lName, int ssn) {
         final String ID = "along28";
         final String PW = "COSC*8zeos";
         final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
 
-        try {
-            Connection con = DriverManager.getConnection(SERVER, ID, PW);
-            Statement stmt = con.createStatement();
-
-            // Insert into the Office table
+        try (Connection con = DriverManager.getConnection(SERVER, ID, PW)) {
             String insertOfficeSQL = "INSERT INTO along28db.Office (idOffice, fname, lName, SSN) VALUES (?, ?, ?, ?)";
             try (PreparedStatement pstmt = con.prepareStatement(insertOfficeSQL)) {
-                pstmt.setInt(1, 101); // Example Office ID
-                pstmt.setString(2, "John"); // Example first name
-                pstmt.setString(3, "Doe"); // Example last name
-                pstmt.setInt(4, 333333333); // Example SSN
+                pstmt.setInt(1, idOffice);
+                pstmt.setString(2, fname);
+                pstmt.setString(3, lName);
+                pstmt.setInt(4, ssn);
 
                 int rowsInserted = pstmt.executeUpdate();
-                System.out.println(rowsInserted + " row(s) inserted into Office table.");
+                JOptionPane.showMessageDialog(null, rowsInserted + " row(s) inserted into Office table.");
             }
-
-            // Print out the Office table
-            ResultSet rs = stmt.executeQuery("SELECT * FROM along28db.Office");
-
-            while (rs.next()) {
-                int OID = rs.getInt("idOffice");
-                String first = rs.getString("fname");
-                String last = rs.getString("lName");
-                int SSN = rs.getInt("SSN");
-                System.out.println(OID + ", " + first + ", " + last + ", " + SSN);
-            }
-
-            System.out.println();
-
-            // Print out the Employee table
-            Statement stmt2 = con.createStatement();
-            ResultSet rs2 = stmt2.executeQuery("SELECT * FROM along28db.Employee");
-
-            while (rs2.next()) {
-                int EMPid = rs2.getInt("EmployeeID");
-                String first2 = rs2.getString("fName");
-                String last2 = rs2.getString("lName");
-                System.out.println(EMPid + ", " + first2 + ", " + last2);
-            }
-
-            System.out.println();
-
-            // Print out AssignTask with associated TaskDescription
-            Statement stmt3 = con.createStatement();
-            ResultSet rs3 = stmt3.executeQuery(
-                    "SELECT at.Task_ID, at.OfficeID2, at.EMP_ID2, td.Description " +
-                            "FROM along28db.AssignTask at " +
-                            "JOIN along28db.TaskDescription td ON at.Task_ID = td.taskIDDesc");
-
-            while (rs3.next()) {
-                int taskID = rs3.getInt("Task_ID");
-                int OfficeID = rs3.getInt("OfficeID2");
-                int EMPid2 = rs3.getInt("EMP_ID2");
-                String description = rs3.getString("Description");
-                System.out.println(taskID + ", " + OfficeID + ", " + EMPid2 + ", " + description);
-            }
-
         } catch (SQLException e) {
-            System.err.println(e);
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
         }
     }
-}
 
+    private static void insertIntoEmployee(int empId, String fname, String lname) {
+        final String ID = "along28";
+        final String PW = "COSC*8zeos";
+        final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
+
+        try (Connection con = DriverManager.getConnection(SERVER, ID, PW)) {
+            String insertEmployeeSQL = "INSERT INTO along28db.Employee (EmployeeID, fName, lName) VALUES (?, ?, ?)";
+            try (PreparedStatement pstmt = con.prepareStatement(insertEmployeeSQL)) {
+                pstmt.setInt(1, empId);
+                pstmt.setString(2, fname);
+                pstmt.setString(3, lname);
+
+                int rowsInserted = pstmt.executeUpdate();
+                JOptionPane.showMessageDialog(null, rowsInserted + " row(s) inserted into Employee table.");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+        }
+    }
+
+    private static String getAllOffices() {
+        final String ID = "along28";
+        final String PW = "COSC*8zeos";
+        final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
+
+        StringBuilder records = new StringBuilder("Office Records:\n");
+
+        try (Connection con = DriverManager.getConnection(SERVER, ID, PW)) {
+            String query = "SELECT * FROM along28db.Office";
+            try (Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
+                while (rs.next()) {
+                    records.append("ID: ").append(rs.getInt("idOffice"))
+                            .append(", First Name: ").append(rs.getString("fname"))
+                            .append(", Last Name: ").append(rs.getString("lName"))
+                            .append(", SSN: ").append(rs.getInt("SSN"))
+                            .append("\n");
+                }
+            }
+        } catch (SQLException e) {
+            records.append("Error fetching data: ").append(e.getMessage());
+        }
+
+        return records.toString();
+    }
+
+    private static String getAllEmployees() {
+        final String ID = "along28";
+        final String PW = "COSC*8zeos";
+        final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
+
+        StringBuilder records = new StringBuilder("Employee Records:\n");
+
+        try (Connection con = DriverManager.getConnection(SERVER, ID, PW)) {
+            String query = "SELECT * FROM along28db.Employee";
+            try (Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
+                while (rs.next()) {
+                    records.append("ID: ").append(rs.getInt("EmployeeID"))
+                            .append(", First Name: ").append(rs.getString("fName"))
+                            .append(", Last Name: ").append(rs.getString("lName"))
+                            .append("\n");
+                }
+            }
+        } catch (SQLException e) {
+            records.append("Error fetching data: ").append(e.getMessage());
+        }
+
+        return records.toString();
+    }
+}
