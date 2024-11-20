@@ -33,8 +33,9 @@ public class Employee extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        OfficeButton = new javax.swing.JButton();
+        saleOrderButton = new javax.swing.JButton();
         employeePage = new javax.swing.JButton();
+        OfficeButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -87,14 +88,14 @@ public class Employee extends javax.swing.JFrame {
             }
         });
 
-        OfficeButton.setBackground(new java.awt.Color(0, 102, 153));
-        OfficeButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        OfficeButton.setForeground(new java.awt.Color(0, 0, 51));
-        OfficeButton.setText("Sales Order");
-        OfficeButton.setBorder(null);
-        OfficeButton.addActionListener(new java.awt.event.ActionListener() {
+        saleOrderButton.setBackground(new java.awt.Color(0, 102, 153));
+        saleOrderButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        saleOrderButton.setForeground(new java.awt.Color(0, 0, 51));
+        saleOrderButton.setText("Sales Order");
+        saleOrderButton.setBorder(null);
+        saleOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OfficeButtonActionPerformed(evt);
+                saleOrderButtonActionPerformed(evt);
             }
         });
 
@@ -109,6 +110,17 @@ public class Employee extends javax.swing.JFrame {
             }
         });
 
+        OfficeButton.setBackground(new java.awt.Color(0, 102, 153));
+        OfficeButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        OfficeButton.setForeground(new java.awt.Color(0, 0, 51));
+        OfficeButton.setText("Office");
+        OfficeButton.setBorder(null);
+        OfficeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OfficeButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -116,15 +128,18 @@ public class Employee extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OfficeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(saleOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(OfficeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(24, 24, 24)
@@ -139,12 +154,13 @@ public class Employee extends javax.swing.JFrame {
                         .addGap(16, 16, 16)
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(OfficeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(saleOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(OfficeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -331,14 +347,10 @@ public class Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void OfficeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OfficeButtonActionPerformed
+    private void saleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saleOrderButtonActionPerformed
         // TODO add your handling code here:
-         Office goToOffice = new Office();
-        goToOffice.setVisible(true);
-        
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_OfficeButtonActionPerformed
+         
+    }//GEN-LAST:event_saleOrderButtonActionPerformed
 
     private void jButton5CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5CancelButtonActionPerformed
         // TODO add your handling code here:
@@ -360,8 +372,8 @@ public class Employee extends javax.swing.JFrame {
 
     private void employeePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePageActionPerformed
         // TODO add your handling code here:
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+        Employee employee = new Employee();
+        employee.setVisible(true);
         
         // Close the current Employee UI
         this.dispose();
@@ -375,6 +387,15 @@ public class Employee extends javax.swing.JFrame {
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_jButtonShowTableActionPerformed
+
+    private void OfficeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OfficeButtonActionPerformed
+        // TODO add your handling code here:
+        Office goToOffice = new Office();
+        goToOffice.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_OfficeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -435,5 +456,6 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane1LNameField;
     private javax.swing.JTextPane jTextPane2FNameField;
     private javax.swing.JTextPane jTextPane4EmployeeIDField;
+    private javax.swing.JButton saleOrderButton;
     // End of variables declaration//GEN-END:variables
 }

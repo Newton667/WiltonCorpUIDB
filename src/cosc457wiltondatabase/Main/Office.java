@@ -31,14 +31,14 @@ public class Office extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        OrderItemButton = new javax.swing.JButton();
+        AssignTaskButton = new javax.swing.JButton();
+        SaleOrderButton = new javax.swing.JButton();
+        officeButton = new javax.swing.JButton();
         employeePage = new javax.swing.JButton();
-        employeePage1 = new javax.swing.JButton();
-        employeePage2 = new javax.swing.JButton();
-        employeePage3 = new javax.swing.JButton();
-        employeePage4 = new javax.swing.JButton();
+        PurchaseOrderButton = new javax.swing.JButton();
+        WorksOnButton = new javax.swing.JButton();
+        CustomerButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -71,37 +71,48 @@ public class Office extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
         jLabel3.setText("WILTON");
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 153));
-        jButton1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 51));
-        jButton1.setText("Order Item");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        OrderItemButton.setBackground(new java.awt.Color(0, 102, 153));
+        OrderItemButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        OrderItemButton.setForeground(new java.awt.Color(0, 0, 51));
+        OrderItemButton.setText("Order Item");
+        OrderItemButton.setToolTipText("");
+        OrderItemButton.setBorder(null);
+        OrderItemButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                OrderItemButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 153));
-        jButton2.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 51));
-        jButton2.setText("Assign Task");
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        AssignTaskButton.setBackground(new java.awt.Color(0, 102, 153));
+        AssignTaskButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        AssignTaskButton.setForeground(new java.awt.Color(0, 0, 51));
+        AssignTaskButton.setText("Assign Task");
+        AssignTaskButton.setBorder(null);
+        AssignTaskButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                AssignTaskButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 102, 153));
-        jButton3.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 51));
-        jButton3.setText("Sales Order");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        SaleOrderButton.setBackground(new java.awt.Color(0, 102, 153));
+        SaleOrderButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        SaleOrderButton.setForeground(new java.awt.Color(0, 0, 51));
+        SaleOrderButton.setText("Sales Order");
+        SaleOrderButton.setBorder(null);
+        SaleOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                SaleOrderButtonActionPerformed(evt);
+            }
+        });
+
+        officeButton.setBackground(new java.awt.Color(0, 102, 153));
+        officeButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        officeButton.setForeground(new java.awt.Color(0, 0, 51));
+        officeButton.setText("Office");
+        officeButton.setBorder(null);
+        officeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                officeButtonActionPerformed(evt);
             }
         });
 
@@ -116,47 +127,36 @@ public class Office extends javax.swing.JFrame {
             }
         });
 
-        employeePage1.setBackground(new java.awt.Color(0, 102, 153));
-        employeePage1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        employeePage1.setForeground(new java.awt.Color(0, 0, 51));
-        employeePage1.setText("Employee");
-        employeePage1.setBorder(null);
-        employeePage1.addActionListener(new java.awt.event.ActionListener() {
+        PurchaseOrderButton.setBackground(new java.awt.Color(0, 102, 153));
+        PurchaseOrderButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        PurchaseOrderButton.setForeground(new java.awt.Color(0, 0, 51));
+        PurchaseOrderButton.setText("PO");
+        PurchaseOrderButton.setBorder(null);
+        PurchaseOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeePage1ActionPerformed(evt);
+                PurchaseOrderButtonActionPerformed(evt);
             }
         });
 
-        employeePage2.setBackground(new java.awt.Color(0, 102, 153));
-        employeePage2.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        employeePage2.setForeground(new java.awt.Color(0, 0, 51));
-        employeePage2.setText("Employee");
-        employeePage2.setBorder(null);
-        employeePage2.addActionListener(new java.awt.event.ActionListener() {
+        WorksOnButton.setBackground(new java.awt.Color(0, 102, 153));
+        WorksOnButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        WorksOnButton.setForeground(new java.awt.Color(0, 0, 51));
+        WorksOnButton.setText("Works On");
+        WorksOnButton.setBorder(null);
+        WorksOnButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeePage2ActionPerformed(evt);
+                WorksOnButtonActionPerformed(evt);
             }
         });
 
-        employeePage3.setBackground(new java.awt.Color(0, 102, 153));
-        employeePage3.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        employeePage3.setForeground(new java.awt.Color(0, 0, 51));
-        employeePage3.setText("Employee");
-        employeePage3.setBorder(null);
-        employeePage3.addActionListener(new java.awt.event.ActionListener() {
+        CustomerButton.setBackground(new java.awt.Color(0, 102, 153));
+        CustomerButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        CustomerButton.setForeground(new java.awt.Color(0, 0, 51));
+        CustomerButton.setText("Customer");
+        CustomerButton.setBorder(null);
+        CustomerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeePage3ActionPerformed(evt);
-            }
-        });
-
-        employeePage4.setBackground(new java.awt.Color(0, 102, 153));
-        employeePage4.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        employeePage4.setForeground(new java.awt.Color(0, 0, 51));
-        employeePage4.setText("Employee");
-        employeePage4.setBorder(null);
-        employeePage4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeePage4ActionPerformed(evt);
+                CustomerButtonActionPerformed(evt);
             }
         });
 
@@ -169,22 +169,22 @@ public class Office extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(employeePage1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employeePage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(employeePage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(officeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SaleOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(OrderItemButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(employeePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(PurchaseOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(employeePage4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(CustomerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(employeePage3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(WorksOnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AssignTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -201,16 +201,16 @@ public class Office extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(employeePage1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(SaleOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderItemButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AssignTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(employeePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(employeePage3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(employeePage4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(officeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PurchaseOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WorksOnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CustomerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -394,17 +394,35 @@ public class Office extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void OrderItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_OrderItemButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void SaleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SaleOrderButtonActionPerformed
+
+    private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
+        // TODO add your handling code here:
+        Office goToOffice = new Office();
+        goToOffice.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
+       
+    }//GEN-LAST:event_officeButtonActionPerformed
+
+    private void jButton5CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5CancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5CancelButtonActionPerformed
+
+    private void jButton6SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6SaveButtonActionPerformed
+
+    }//GEN-LAST:event_jButton6SaveButtonActionPerformed
 
     private void employeePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePageActionPerformed
         // TODO add your handling code here:
@@ -415,29 +433,17 @@ public class Office extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_employeePageActionPerformed
 
-    private void jButton5CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5CancelButtonActionPerformed
+    private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5CancelButtonActionPerformed
+    }//GEN-LAST:event_PurchaseOrderButtonActionPerformed
 
-    private void jButton6SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6SaveButtonActionPerformed
-
-    }//GEN-LAST:event_jButton6SaveButtonActionPerformed
-
-    private void employeePage1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage1ActionPerformed
+    private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_employeePage1ActionPerformed
+    }//GEN-LAST:event_WorksOnButtonActionPerformed
 
-    private void employeePage2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage2ActionPerformed
+    private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_employeePage2ActionPerformed
-
-    private void employeePage3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_employeePage3ActionPerformed
-
-    private void employeePage4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_employeePage4ActionPerformed
+    }//GEN-LAST:event_CustomerButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -476,14 +482,13 @@ public class Office extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AssignTaskButton;
+    private javax.swing.JButton CustomerButton;
+    private javax.swing.JButton OrderItemButton;
+    private javax.swing.JButton PurchaseOrderButton;
+    private javax.swing.JButton SaleOrderButton;
+    private javax.swing.JButton WorksOnButton;
     private javax.swing.JButton employeePage;
-    private javax.swing.JButton employeePage1;
-    private javax.swing.JButton employeePage2;
-    private javax.swing.JButton employeePage3;
-    private javax.swing.JButton employeePage4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5CancelButton;
     private javax.swing.JButton jButton6SaveButton;
     private javax.swing.JLabel jLabel1;
@@ -506,5 +511,6 @@ public class Office extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane4EmployeeIDField;
     private javax.swing.JTextPane jTextPane4EmployeeIDField1;
     private javax.swing.JTextPane jTextPane4EmployeeIDField2;
+    private javax.swing.JButton officeButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -59,7 +59,7 @@
                   <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton5" min="-2" pref="73" max="-2" attributes="0"/>
+                  <Component id="employeePage" min="-2" pref="73" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton3" min="-2" pref="73" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -91,7 +91,7 @@
                               <Component id="jButton3" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="jButton1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="jButton2" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jButton5" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="employeePage" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -191,7 +191,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="employeePage">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="66" red="0" type="rgb"/>
@@ -208,7 +208,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="employeePageActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
