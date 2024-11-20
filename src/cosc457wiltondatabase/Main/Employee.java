@@ -33,8 +33,8 @@ public class Employee extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        OfficeButton = new javax.swing.JButton();
+        employeePage = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -87,25 +87,25 @@ public class Employee extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 102, 153));
-        jButton3.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 51));
-        jButton3.setText("Sales Order");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        OfficeButton.setBackground(new java.awt.Color(0, 102, 153));
+        OfficeButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        OfficeButton.setForeground(new java.awt.Color(0, 0, 51));
+        OfficeButton.setText("Sales Order");
+        OfficeButton.setBorder(null);
+        OfficeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                OfficeButtonActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 102, 153));
-        jButton5.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 51));
-        jButton5.setText("Employee");
-        jButton5.setBorder(null);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        employeePage.setBackground(new java.awt.Color(0, 102, 153));
+        employeePage.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        employeePage.setForeground(new java.awt.Color(0, 0, 51));
+        employeePage.setText("Employee");
+        employeePage.setBorder(null);
+        employeePage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                employeePageActionPerformed(evt);
             }
         });
 
@@ -117,9 +117,9 @@ public class Employee extends javax.swing.JFrame {
                 .addGap(250, 250, 250)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(OfficeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -141,10 +141,10 @@ public class Employee extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OfficeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -331,9 +331,14 @@ public class Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void OfficeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OfficeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+         Office goToOffice = new Office();
+        goToOffice.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_OfficeButtonActionPerformed
 
     private void jButton5CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5CancelButtonActionPerformed
         // TODO add your handling code here:
@@ -353,9 +358,14 @@ public class Employee extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(this, "Employee added successfully!");
     }//GEN-LAST:event_jButton6SaveButtonActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void employeePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePageActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        EmployeeTable employeeTable = new EmployeeTable();
+        employeeTable.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_employeePageActionPerformed
 
     private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
         // Create an instance of EmployeeTable and display it
@@ -402,10 +412,10 @@ public class Employee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton OfficeButton;
+    private javax.swing.JButton employeePage;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton5CancelButton;
     private javax.swing.JButton jButton6SaveButton;
     private javax.swing.JButton jButtonShowTable;

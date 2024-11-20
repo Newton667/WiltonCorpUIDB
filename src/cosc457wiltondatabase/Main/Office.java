@@ -34,7 +34,11 @@ public class Office extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        employeePage = new javax.swing.JButton();
+        employeePage1 = new javax.swing.JButton();
+        employeePage2 = new javax.swing.JButton();
+        employeePage3 = new javax.swing.JButton();
+        employeePage4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -101,14 +105,58 @@ public class Office extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 102, 153));
-        jButton4.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 51));
-        jButton4.setText("Employee");
-        jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        employeePage.setBackground(new java.awt.Color(0, 102, 153));
+        employeePage.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        employeePage.setForeground(new java.awt.Color(0, 0, 51));
+        employeePage.setText("Employee");
+        employeePage.setBorder(null);
+        employeePage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                employeePageActionPerformed(evt);
+            }
+        });
+
+        employeePage1.setBackground(new java.awt.Color(0, 102, 153));
+        employeePage1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        employeePage1.setForeground(new java.awt.Color(0, 0, 51));
+        employeePage1.setText("Employee");
+        employeePage1.setBorder(null);
+        employeePage1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeePage1ActionPerformed(evt);
+            }
+        });
+
+        employeePage2.setBackground(new java.awt.Color(0, 102, 153));
+        employeePage2.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        employeePage2.setForeground(new java.awt.Color(0, 0, 51));
+        employeePage2.setText("Employee");
+        employeePage2.setBorder(null);
+        employeePage2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeePage2ActionPerformed(evt);
+            }
+        });
+
+        employeePage3.setBackground(new java.awt.Color(0, 102, 153));
+        employeePage3.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        employeePage3.setForeground(new java.awt.Color(0, 0, 51));
+        employeePage3.setText("Employee");
+        employeePage3.setBorder(null);
+        employeePage3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeePage3ActionPerformed(evt);
+            }
+        });
+
+        employeePage4.setBackground(new java.awt.Color(0, 102, 153));
+        employeePage4.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        employeePage4.setForeground(new java.awt.Color(0, 0, 51));
+        employeePage4.setText("Employee");
+        employeePage4.setBorder(null);
+        employeePage4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeePage4ActionPerformed(evt);
             }
         });
 
@@ -119,14 +167,24 @@ public class Office extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(employeePage1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(employeePage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(employeePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(employeePage4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(employeePage3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -142,12 +200,17 @@ public class Office extends javax.swing.JFrame {
                         .addGap(16, 16, 16)
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(employeePage1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(employeePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(employeePage3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(employeePage4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -296,7 +359,7 @@ public class Office extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -343,9 +406,14 @@ public class Office extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void employeePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePageActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        Employee employeeBack = new Employee();
+        employeeBack.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_employeePageActionPerformed
 
     private void jButton5CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5CancelButtonActionPerformed
         // TODO add your handling code here:
@@ -354,6 +422,22 @@ public class Office extends javax.swing.JFrame {
     private void jButton6SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6SaveButtonActionPerformed
 
     }//GEN-LAST:event_jButton6SaveButtonActionPerformed
+
+    private void employeePage1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_employeePage1ActionPerformed
+
+    private void employeePage2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_employeePage2ActionPerformed
+
+    private void employeePage3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_employeePage3ActionPerformed
+
+    private void employeePage4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_employeePage4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -392,10 +476,14 @@ public class Office extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton employeePage;
+    private javax.swing.JButton employeePage1;
+    private javax.swing.JButton employeePage2;
+    private javax.swing.JButton employeePage3;
+    private javax.swing.JButton employeePage4;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5CancelButton;
     private javax.swing.JButton jButton6SaveButton;
     private javax.swing.JLabel jLabel1;

@@ -36,16 +36,16 @@ public class COSC457WiltonDatabase {
             Statement stmt = con.createStatement();
 
             // Insert into the Office table
-            String insertOfficeSQL = "INSERT INTO along28db.Office (idOffice, fname, lName, SSN) VALUES (?, ?, ?, ?)";
-            try (PreparedStatement pstmt = con.prepareStatement(insertOfficeSQL)) {
-                pstmt.setInt(1, 102); // Example Office ID
-                pstmt.setString(2, "AdamJr"); // Example first name
-                pstmt.setString(3, "Gooner"); // Example last name
-                pstmt.setInt(4, 333336933); // Example SSN
-
-                int rowsInserted = pstmt.executeUpdate();
-                System.out.println(rowsInserted + " row(s) inserted into Office table.");
-            }
+//            String insertOfficeSQL = "INSERT INTO along28db.Office (idOffice, fname, lName, SSN) VALUES (?, ?, ?, ?)";
+//            try (PreparedStatement pstmt = con.prepareStatement(insertOfficeSQL)) {
+//                pstmt.setInt(1, 8989); // Example Office ID
+//                pstmt.setString(2, "AdamJr"); // Example first name
+//                pstmt.setString(3, "Gooner"); // Example last name
+//                pstmt.setInt(4, 333336933); // Example SSN
+//
+//                int rowsInserted = pstmt.executeUpdate();
+//                System.out.println(rowsInserted + " row(s) inserted into Office table.");
+//            }
 
             // Print out the Office table
             ResultSet rs = stmt.executeQuery("SELECT * FROM along28db.Office");
