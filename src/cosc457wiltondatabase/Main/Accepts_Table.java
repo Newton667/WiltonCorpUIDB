@@ -4,21 +4,17 @@
  */
 package cosc457wiltondatabase.Main;
 
-import cosc457wiltondatabase.*;
-import javax.swing.JTable;
-
 /**
  *
- * @author saras
+ * @author Sara
  */
-public class EmployeeTable extends javax.swing.JFrame {
+public class Accepts_Table extends javax.swing.JFrame {
 
     /**
-     * Creates new form Employee
+     * Creates new form Accepts_Table
      */
-    public EmployeeTable() {
+    public Accepts_Table() {
         initComponents();
-        populateEmployeeTable(); // Call method to load data after UI initialization
     }
 
     /**
@@ -243,7 +239,7 @@ public class EmployeeTable extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel1.setText("Employee Table");
+        jLabel1.setText("Accepts Table");
 
         jButtonShowTable.setBackground(new java.awt.Color(0, 102, 153));
         jButtonShowTable.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
@@ -268,7 +264,7 @@ public class EmployeeTable extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(440, 440, 440)
@@ -329,28 +325,10 @@ public class EmployeeTable extends javax.swing.JFrame {
         // TODO add your handling code here:
         Employee employee = new Employee();
         employee.setVisible(true);
-        
+
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_employeePageActionPerformed
-
-    private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
-        // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_jButtonShowTableActionPerformed
-
-    private void BacktoInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BacktoInsertActionPerformed
-        // Create an instance of EmployeeTable and display it
-        Employee employee = new Employee();
-        employee.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_BacktoInsertActionPerformed
 
     private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
         // TODO add your handling code here:
@@ -359,7 +337,6 @@ public class EmployeeTable extends javax.swing.JFrame {
 
         // Close the current Employee UI
         this.dispose();
-
     }//GEN-LAST:event_officeButtonActionPerformed
 
     private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
@@ -374,14 +351,24 @@ public class EmployeeTable extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
-    // Method to populate the JTable with employee data
-    private void populateEmployeeTable() {
-        EmployeeTableShow employeeTableShow = new EmployeeTableShow();
-        JTable employeeTable = new JTable(employeeTableShow.getEmployeeTableModel());
-        
-        // Set the JTable as the view for jScrollPane1EmployeeTableShow
-        jScrollPane1EmployeeTableShow.setViewportView(employeeTable);
-    }
+    private void BacktoInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BacktoInsertActionPerformed
+        // Create an instance of EmployeeTable and display it
+        Accepts accepts = new Accepts();
+        accepts.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_BacktoInsertActionPerformed
+
+    private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
+        // Create an instance of EmployeeTable and display it
+        Accepts_Table acceptsTable = new Accepts_Table();
+        acceptsTable.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_jButtonShowTableActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -399,21 +386,20 @@ public class EmployeeTable extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EmployeeTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accepts_Table.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EmployeeTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accepts_Table.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EmployeeTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accepts_Table.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EmployeeTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accepts_Table.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EmployeeTable().setVisible(true);
+                new Accepts_Table().setVisible(true);
             }
         });
     }
