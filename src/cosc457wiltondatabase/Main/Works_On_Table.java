@@ -30,7 +30,7 @@ public class Works_On_Table extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        AssignTaskButton = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         employeePage6 = new javax.swing.JButton();
         officeButton6 = new javax.swing.JButton();
@@ -68,14 +68,14 @@ public class Works_On_Table extends javax.swing.JFrame {
             }
         });
 
-        jButton20.setBackground(new java.awt.Color(0, 102, 153));
-        jButton20.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton20.setForeground(new java.awt.Color(0, 0, 51));
-        jButton20.setText("Assign Task");
-        jButton20.setBorder(null);
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        AssignTaskButton.setBackground(new java.awt.Color(0, 102, 153));
+        AssignTaskButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        AssignTaskButton.setForeground(new java.awt.Color(0, 0, 51));
+        AssignTaskButton.setText("Assign Task");
+        AssignTaskButton.setBorder(null);
+        AssignTaskButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                AssignTaskButtonActionPerformed(evt);
             }
         });
 
@@ -161,7 +161,7 @@ public class Works_On_Table extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(AssignTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(officeButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -189,7 +189,7 @@ public class Works_On_Table extends javax.swing.JFrame {
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AssignTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(employeePage6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -313,9 +313,13 @@ public class Works_On_Table extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
+        Assign_Task task = new Assign_Task();
+        task.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
@@ -405,13 +409,13 @@ public class Works_On_Table extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AssignTaskButton;
     private javax.swing.JButton BacktoInsert2;
     private javax.swing.JButton CustomerButton6;
     private javax.swing.JButton PurchaseOrderButton6;
     private javax.swing.JButton WorksOnButton6;
     private javax.swing.JButton employeePage6;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButtonShowTable2;
     private javax.swing.JLabel jLabel15;

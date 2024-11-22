@@ -380,7 +380,11 @@ public class Works_On extends javax.swing.JFrame {
     }//GEN-LAST:event_OrderItemButtonActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
-        // TODO add your handling code here:
+        Assign_Task task = new Assign_Task();
+        task.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
     private void SaleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButtonActionPerformed

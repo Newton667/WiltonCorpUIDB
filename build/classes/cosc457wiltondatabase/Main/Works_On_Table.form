@@ -67,7 +67,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButton19" min="-2" pref="73" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton20" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="AssignTaskButton" min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="officeButton6" min="-2" pref="73" max="-2" attributes="0"/>
@@ -103,7 +103,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jButton21" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="jButton19" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jButton20" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="AssignTaskButton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="employeePage6" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -171,7 +171,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton19ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton20">
+        <Component class="javax.swing.JButton" name="AssignTaskButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="66" red="0" type="rgb"/>
@@ -188,7 +188,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton20ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AssignTaskButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton21">

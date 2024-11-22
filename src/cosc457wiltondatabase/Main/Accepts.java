@@ -95,17 +95,17 @@ public class Accepts extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        OfficeIDTextField = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        POTextField = new javax.swing.JTextPane();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        Save = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jButtonShowTable2 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        ActionTextField = new javax.swing.JTextPane();
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -911,9 +911,9 @@ public class Accepts extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 102)));
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(OfficeIDTextField);
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(POTextField);
 
         jLabel16.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 102, 153));
@@ -923,12 +923,12 @@ public class Accepts extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 102, 153));
         jLabel17.setText("Action");
 
-        jButton9.setBackground(new java.awt.Color(0, 102, 153));
-        jButton9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Save");
-        jButton9.setToolTipText("");
-        jButton9.setBorder(null);
+        Save.setBackground(new java.awt.Color(0, 102, 153));
+        Save.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        Save.setForeground(new java.awt.Color(255, 255, 255));
+        Save.setText("Save");
+        Save.setToolTipText("");
+        Save.setBorder(null);
 
         jButton10.setBackground(new java.awt.Color(0, 102, 153));
         jButton10.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -957,7 +957,7 @@ public class Accepts extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane9.setViewportView(jTextPane7);
+        jScrollPane9.setViewportView(ActionTextField);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -976,7 +976,7 @@ public class Accepts extends javax.swing.JFrame {
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(248, 248, 248)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(287, 287, 287)
                         .addComponent(jLabel17)
@@ -1014,7 +1014,7 @@ public class Accepts extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(70, 70, 70))))
         );
@@ -1181,7 +1181,11 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_OrderItemButton2ActionPerformed
 
     private void AssignTaskButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButton2ActionPerformed
-        // TODO add your handling code here:
+        Assign_Task task = new Assign_Task();
+        task.setVisible(true);
+        
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_AssignTaskButton2ActionPerformed
 
     private void SaleOrderButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButton2ActionPerformed
@@ -1267,21 +1271,25 @@ public class Accepts extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextPane ActionTextField;
     private javax.swing.JButton AssignTaskButton;
     private javax.swing.JButton AssignTaskButton1;
     private javax.swing.JButton AssignTaskButton2;
     private javax.swing.JButton CustomerButton;
     private javax.swing.JButton CustomerButton1;
     private javax.swing.JButton CustomerButton2;
+    private javax.swing.JTextPane OfficeIDTextField;
     private javax.swing.JButton OrderItemButton;
     private javax.swing.JButton OrderItemButton1;
     private javax.swing.JButton OrderItemButton2;
+    private javax.swing.JTextPane POTextField;
     private javax.swing.JButton PurchaseOrderButton;
     private javax.swing.JButton PurchaseOrderButton1;
     private javax.swing.JButton PurchaseOrderButton2;
     private javax.swing.JButton SaleOrderButton;
     private javax.swing.JButton SaleOrderButton1;
     private javax.swing.JButton SaleOrderButton2;
+    private javax.swing.JButton Save;
     private javax.swing.JButton WorksOnButton;
     private javax.swing.JButton WorksOnButton1;
     private javax.swing.JButton WorksOnButton2;
@@ -1293,7 +1301,6 @@ public class Accepts extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonShowTable;
     private javax.swing.JButton jButtonShowTable1;
     private javax.swing.JButton jButtonShowTable2;
@@ -1341,9 +1348,6 @@ public class Accepts extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
     private javax.swing.JButton officeButton;
     private javax.swing.JButton officeButton1;
     private javax.swing.JButton officeButton2;
