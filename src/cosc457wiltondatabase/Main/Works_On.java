@@ -388,10 +388,9 @@ public class Works_On extends javax.swing.JFrame {
     }//GEN-LAST:event_SaleOrderButtonActionPerformed
 
     private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
-        // TODO add your handling code here:
-        Customer goToCustomer = new Customer();
-        goToCustomer.setVisible(true);
-
+       Office goToOffice = new Office();
+        goToOffice.setVisible(true);
+        
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_officeButtonActionPerformed
@@ -411,10 +410,16 @@ public class Works_On extends javax.swing.JFrame {
 
     private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
         // TODO add your handling code here:
+        Customer goToCustomer = new Customer();
+        goToCustomer.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -422,12 +427,7 @@ public class Works_On extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
-        // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
+        
     }//GEN-LAST:event_jButtonShowTableActionPerformed
 
     /**
