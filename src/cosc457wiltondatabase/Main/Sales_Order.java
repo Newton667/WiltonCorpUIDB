@@ -520,27 +520,35 @@ try {
     // Get data for SO Description table
     String status = jTextPane6Status.getText().trim();
     String date = jTextPane2Date.getText().trim(); // Ensure the format matches your database's DATE column format
-    int contractNumber = Integer.parseInt(jTextPane4ContractNumber.getText().trim()); // Ensure input is a valid integer
+    String contractNumberText = jTextPane4ContractNumber.getText().trim();
     String salesOrderDescription = jTextArea1SalesOrderDescription.getText().trim();
 
-    // Create an instance of insert class for SO Description
-    Sales_OrderDescriptionInsert1 salesOrderDescriptionInsert = new Sales_OrderDescriptionInsert1();
-
-    // Conditionally insert into Sales Order table only if Office ID is provided
+    // Insert into Sales Order table only if Office ID is provided
     if (officeID2 != null) {
         Sales_OrderInsert salesOrderInsert = new Sales_OrderInsert();
         salesOrderInsert.insertSalesOrder(soID, officeID2);
         System.out.println("Inserted into Sales Order table.");
     } else {
-        System.out.println("Office ID is empty. Skipping insertion into Sales Order table.");
+        System.out.println("Office ID is missing. Skipping insertion into Sales Order table.");
     }
 
-    // Always insert into SO Description table
-    salesOrderDescriptionInsert.insertSalesOrderDescription(soID, status, date, contractNumber, salesOrderDescription);
-    System.out.println("Inserted into SO Description table.");
+    // Check if description-related fields are filled
+    boolean hasDescriptionData = !status.isEmpty() || !date.isEmpty() || !contractNumberText.isEmpty() || !salesOrderDescription.isEmpty();
 
-    // Optional: Show confirmation message
-    javax.swing.JOptionPane.showMessageDialog(this, "Sales Order and Description added successfully!");
+    if (hasDescriptionData) {
+        // Parse contract number if provided
+        int contractNumber = contractNumberText.isEmpty() ? 0 : Integer.parseInt(contractNumberText); // Default to 0 if empty
+
+        // Insert into SO Description table
+        Sales_OrderDescriptionInsert1 salesOrderDescriptionInsert = new Sales_OrderDescriptionInsert1();
+        salesOrderDescriptionInsert.insertSalesOrderDescription(soID, status, date, contractNumber, salesOrderDescription);
+        System.out.println("Inserted into SO Description table.");
+    } else {
+        System.out.println("No description-related data provided. Skipping SO Description table insertion.");
+    }
+
+    // Show confirmation message
+    javax.swing.JOptionPane.showMessageDialog(this, "Sales Order and Description processed successfully!");
 
 } catch (NumberFormatException e) {
     javax.swing.JOptionPane.showMessageDialog(this, "Invalid input. Please check your data.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
@@ -548,6 +556,8 @@ try {
     e.printStackTrace(); // Print stack trace for debugging
     javax.swing.JOptionPane.showMessageDialog(this, "An error occurred: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
 }
+
+
 
 
 

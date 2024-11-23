@@ -59,7 +59,6 @@ public class OfficeTable extends javax.swing.JFrame {
         jScrollPane1EmployeeTableShow2 = new javax.swing.JScrollPane();
         BacktoInsert2 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        jButtonShowTable2 = new javax.swing.JButton();
 
         jPanel4.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -498,17 +497,6 @@ public class OfficeTable extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 51, 102));
         jLabel17.setText("Office Table");
 
-        jButtonShowTable2.setBackground(new java.awt.Color(0, 102, 153));
-        jButtonShowTable2.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
-        jButtonShowTable2.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonShowTable2.setText("Show Table");
-        jButtonShowTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButtonShowTable2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonShowTable2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -522,11 +510,6 @@ public class OfficeTable extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(440, 440, 440)
-                    .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(441, Short.MAX_VALUE)))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -536,11 +519,6 @@ public class OfficeTable extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(298, 298, 298)
-                    .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(298, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -677,15 +655,6 @@ public class OfficeTable extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsert2ActionPerformed
 
-    private void jButtonShowTable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTable2ActionPerformed
-        // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_jButtonShowTable2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -725,80 +694,35 @@ public class OfficeTable extends javax.swing.JFrame {
     private javax.swing.JButton BacktoInsert1;
     private javax.swing.JButton BacktoInsert2;
     private javax.swing.JButton CustomerButton1;
-    private javax.swing.JButton CustomerButton2;
-    private javax.swing.JButton CustomerButton3;
-    private javax.swing.JButton CustomerButton4;
-    private javax.swing.JButton CustomerButton5;
     private javax.swing.JButton CustomerButton6;
     private javax.swing.JButton PurchaseOrderButton1;
-    private javax.swing.JButton PurchaseOrderButton2;
-    private javax.swing.JButton PurchaseOrderButton3;
-    private javax.swing.JButton PurchaseOrderButton4;
-    private javax.swing.JButton PurchaseOrderButton5;
     private javax.swing.JButton PurchaseOrderButton6;
     private javax.swing.JButton WorksOnButton1;
-    private javax.swing.JButton WorksOnButton2;
-    private javax.swing.JButton WorksOnButton3;
-    private javax.swing.JButton WorksOnButton4;
-    private javax.swing.JButton WorksOnButton5;
     private javax.swing.JButton WorksOnButton6;
     private javax.swing.JButton employeePage1;
-    private javax.swing.JButton employeePage2;
-    private javax.swing.JButton employeePage3;
-    private javax.swing.JButton employeePage4;
-    private javax.swing.JButton employeePage5;
     private javax.swing.JButton employeePage6;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonShowTable1;
-    private javax.swing.JButton jButtonShowTable2;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1EmployeeTableShow1;
     private javax.swing.JScrollPane jScrollPane1EmployeeTableShow2;
     private javax.swing.JButton officeButton1;
-    private javax.swing.JButton officeButton2;
-    private javax.swing.JButton officeButton3;
-    private javax.swing.JButton officeButton4;
-    private javax.swing.JButton officeButton5;
     private javax.swing.JButton officeButton6;
     // End of variables declaration//GEN-END:variables
 }

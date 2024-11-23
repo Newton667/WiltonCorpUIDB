@@ -400,7 +400,11 @@ public class Employee extends javax.swing.JFrame {
     }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
     private void saleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saleOrderButtonActionPerformed
-        // TODO add your handling code here:
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
          
     }//GEN-LAST:event_saleOrderButtonActionPerformed
 
