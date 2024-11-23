@@ -455,6 +455,11 @@ public class Sales_Order extends javax.swing.JFrame {
 
     private void SaleOrderButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButton2ActionPerformed
         // TODO add your handling code here:
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButton2ActionPerformed
 
     private void officeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButton2ActionPerformed

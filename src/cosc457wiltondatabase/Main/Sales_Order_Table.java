@@ -4,6 +4,8 @@
  */
 package cosc457wiltondatabase.Main;
 
+import javax.swing.JTable;
+
 /**
  *
  * @author Sara
@@ -15,7 +17,11 @@ public class Sales_Order_Table extends javax.swing.JFrame {
      */
     public Sales_Order_Table() {
         initComponents();
+        populateSOTable(); // Call method to load data after UI initialization
+        populateSODescriptionTable();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +37,7 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
+        jButton21SalesOrder = new javax.swing.JButton();
         employeePage6 = new javax.swing.JButton();
         officeButton6 = new javax.swing.JButton();
         PurchaseOrderButton6 = new javax.swing.JButton();
@@ -39,9 +45,11 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         CustomerButton6 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-        jScrollPane1EmployeeTableShow2 = new javax.swing.JScrollPane();
-        BacktoInsert2 = new javax.swing.JButton();
+        jScrollPane1SOTableShow = new javax.swing.JScrollPane();
+        jScrollPane1SOTableShow1 = new javax.swing.JScrollPane();
+        jScrollPane1SOTableShow2 = new javax.swing.JScrollPane();
         jLabel17 = new javax.swing.JLabel();
+        BacktoInsert2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,14 +86,14 @@ public class Sales_Order_Table extends javax.swing.JFrame {
             }
         });
 
-        jButton21.setBackground(new java.awt.Color(0, 102, 153));
-        jButton21.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton21.setForeground(new java.awt.Color(0, 0, 51));
-        jButton21.setText("Sales Order");
-        jButton21.setBorder(null);
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
+        jButton21SalesOrder.setBackground(new java.awt.Color(0, 102, 153));
+        jButton21SalesOrder.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        jButton21SalesOrder.setForeground(new java.awt.Color(0, 0, 51));
+        jButton21SalesOrder.setText("Sales Order");
+        jButton21SalesOrder.setBorder(null);
+        jButton21SalesOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
+                jButton21SalesOrderActionPerformed(evt);
             }
         });
 
@@ -156,7 +164,7 @@ public class Sales_Order_Table extends javax.swing.JFrame {
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(employeePage6, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton21SalesOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -186,7 +194,7 @@ public class Sales_Order_Table extends javax.swing.JFrame {
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton21SalesOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(employeePage6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -206,6 +214,32 @@ public class Sales_Order_Table extends javax.swing.JFrame {
 
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jScrollPane1SOTableShow.setViewportView(jScrollPane1SOTableShow1);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane1SOTableShow, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1SOTableShow2, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1SOTableShow2)
+                    .addComponent(jScrollPane1SOTableShow, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)))
+        );
+
+        jLabel17.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 36)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel17.setText("Sales Order Table");
+
         BacktoInsert2.setBackground(new java.awt.Color(0, 102, 153));
         BacktoInsert2.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
         BacktoInsert2.setForeground(new java.awt.Color(255, 255, 255));
@@ -217,29 +251,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(230, Short.MAX_VALUE)
-                .addComponent(jScrollPane1EmployeeTableShow2, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(BacktoInsert2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1EmployeeTableShow2)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(471, Short.MAX_VALUE)
-                .addComponent(BacktoInsert2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jLabel17.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 36)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel17.setText("Sales Order Table");
-
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -247,12 +258,18 @@ public class Sales_Order_Table extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel17)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabel17)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(BacktoInsert2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,7 +278,9 @@ public class Sales_Order_Table extends javax.swing.JFrame {
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BacktoInsert2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -295,9 +314,14 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
 
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+    private void jButton21SalesOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21SalesOrderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
+    }//GEN-LAST:event_jButton21SalesOrderActionPerformed
 
     private void employeePage6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage6ActionPerformed
         // TODO add your handling code here:
@@ -337,7 +361,32 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_BacktoInsert2ActionPerformed
+    // Method to populate the JTable with employee data
+private void populateSOTable() {
+    // Create an instance of Sales_Order_TableShow
+    Sales_Order_TableShow salesOrderTableShow = new Sales_Order_TableShow();
+    
+    // Create a JTable using the DefaultTableModel from Sales_Order_TableShow
+    JTable salesOrderTable = new JTable(salesOrderTableShow.jScrollPane1SOTableShow());
+    
+    // Set the JTable as the view for jScrollPane1SOTableShow
+    jScrollPane1SOTableShow.setViewportView(salesOrderTable);
+}
 
+private void populateSODescriptionTable() {
+    // Create an instance of Sales_Order_TableShowDesc
+    Sales_Order_TableShowDesc salesOrderTableShowDesc = new Sales_Order_TableShowDesc();
+    
+    // Create a JTable using the DefaultTableModel from Sales_Order_TableShowDesc
+    JTable salesOrderDescriptionTable = new JTable(salesOrderTableShowDesc.jScrollPane1SOTableShow());
+    
+    // Set the JTable as the view for jScrollPane1SODescriptionTableShow
+    jScrollPane1SOTableShow2.setViewportView(salesOrderDescriptionTable);
+}
+
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -381,14 +430,16 @@ public class Sales_Order_Table extends javax.swing.JFrame {
     private javax.swing.JButton employeePage6;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton21SalesOrder;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JScrollPane jScrollPane1EmployeeTableShow2;
+    private javax.swing.JScrollPane jScrollPane1SOTableShow;
+    private javax.swing.JScrollPane jScrollPane1SOTableShow1;
+    private javax.swing.JScrollPane jScrollPane1SOTableShow2;
     private javax.swing.JButton officeButton6;
     // End of variables declaration//GEN-END:variables
 }
