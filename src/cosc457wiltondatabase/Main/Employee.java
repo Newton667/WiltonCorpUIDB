@@ -450,7 +450,11 @@ public class Employee extends javax.swing.JFrame {
     }//GEN-LAST:event_OfficeButtonActionPerformed
 
     private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
-        // TODO add your handling code here:
+        Purchase_Order PO = new Purchase_Order();
+        PO.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_PurchaseOrderButtonActionPerformed
 
     private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
