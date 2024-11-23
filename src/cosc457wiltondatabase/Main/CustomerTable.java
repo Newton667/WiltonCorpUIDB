@@ -59,7 +59,6 @@ public class CustomerTable extends javax.swing.JFrame {
         jScrollPane1EmployeeTableShow1 = new javax.swing.JScrollPane();
         BacktoInsert1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jButtonShowTable1 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -498,17 +497,6 @@ public class CustomerTable extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(0, 51, 102));
         jLabel6.setText("Customer Table");
 
-        jButtonShowTable1.setBackground(new java.awt.Color(0, 102, 153));
-        jButtonShowTable1.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
-        jButtonShowTable1.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonShowTable1.setText("Show Table");
-        jButtonShowTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButtonShowTable1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonShowTable1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -522,11 +510,6 @@ public class CustomerTable extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
-                    .addGap(440, 440, 440)
-                    .addComponent(jButtonShowTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(441, Short.MAX_VALUE)))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -536,11 +519,6 @@ public class CustomerTable extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel5Layout.createSequentialGroup()
-                    .addGap(298, 298, 298)
-                    .addComponent(jButtonShowTable1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(298, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -677,15 +655,6 @@ public class CustomerTable extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsert1ActionPerformed
 
-    private void jButtonShowTable1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTable1ActionPerformed
-        // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_jButtonShowTable1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -739,7 +708,6 @@ public class CustomerTable extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButtonShowTable;
-    private javax.swing.JButton jButtonShowTable1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -418,7 +418,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="287" max="-2" attributes="0"/>
-                              <Component id="jButton9" min="-2" pref="92" max="-2" attributes="0"/>
+                              <Component id="SaveButton" min="-2" pref="92" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                               <Component id="jButton10" min="-2" pref="92" max="-2" attributes="0"/>
                           </Group>
@@ -482,7 +482,7 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton9" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="SaveButton" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="jButton10" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -500,7 +500,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane5">
+                <Component class="javax.swing.JTextPane" name="jTextPane5SalesOrderID">
                 </Component>
               </SubComponents>
             </Container>
@@ -511,7 +511,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane6">
+                <Component class="javax.swing.JTextPane" name="jTextPane6Status">
                 </Component>
               </SubComponents>
             </Container>
@@ -537,7 +537,7 @@
                 <Property name="text" type="java.lang.String" value="Sales Order Description"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton9">
+            <Component class="javax.swing.JButton" name="SaveButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="66" red="0" type="rgb"/>
@@ -554,6 +554,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton10">
               <Properties>
@@ -614,7 +617,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                <Component class="javax.swing.JTextArea" name="jTextArea1SalesOrderDescription">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -640,7 +643,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane1">
+                <Component class="javax.swing.JTextPane" name="jTextPane1OfficeID">
                 </Component>
               </SubComponents>
             </Container>
@@ -662,7 +665,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane2">
+                <Component class="javax.swing.JTextPane" name="jTextPane2Date">
                 </Component>
               </SubComponents>
             </Container>
@@ -684,7 +687,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane4">
+                <Component class="javax.swing.JTextPane" name="jTextPane4ContractNumber">
                 </Component>
               </SubComponents>
             </Container>

@@ -41,26 +41,26 @@ public class Sales_Order extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        jTextPane5SalesOrderID = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        jTextPane6Status = new javax.swing.JTextPane();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        SaveButton = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jButtonShowTable2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea1SalesOrderDescription = new javax.swing.JTextArea();
         jLabel19 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        jTextPane1OfficeID = new javax.swing.JTextPane();
         jLabel20 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        jTextPane2Date = new javax.swing.JTextPane();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        jTextPane4ContractNumber = new javax.swing.JTextPane();
         jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -229,9 +229,9 @@ public class Sales_Order extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 102)));
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(jTextPane5SalesOrderID);
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(jTextPane6Status);
 
         jLabel16.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 102, 153));
@@ -241,12 +241,17 @@ public class Sales_Order extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 102, 153));
         jLabel17.setText("Sales Order Description");
 
-        jButton9.setBackground(new java.awt.Color(0, 102, 153));
-        jButton9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Save");
-        jButton9.setToolTipText("");
-        jButton9.setBorder(null);
+        SaveButton.setBackground(new java.awt.Color(0, 102, 153));
+        SaveButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        SaveButton.setForeground(new java.awt.Color(255, 255, 255));
+        SaveButton.setText("Save");
+        SaveButton.setToolTipText("");
+        SaveButton.setBorder(null);
+        SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveButtonActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(0, 102, 153));
         jButton10.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -275,27 +280,27 @@ public class Sales_Order extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1SalesOrderDescription.setColumns(20);
+        jTextArea1SalesOrderDescription.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1SalesOrderDescription);
 
         jLabel19.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 102, 153));
         jLabel19.setText("Office ID");
 
-        jScrollPane2.setViewportView(jTextPane1);
+        jScrollPane2.setViewportView(jTextPane1OfficeID);
 
         jLabel20.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 102, 153));
         jLabel20.setText("Date");
 
-        jScrollPane3.setViewportView(jTextPane2);
+        jScrollPane3.setViewportView(jTextPane2Date);
 
         jLabel22.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 102, 153));
         jLabel22.setText("Contract Number");
 
-        jScrollPane7.setViewportView(jTextPane4);
+        jScrollPane7.setViewportView(jTextPane4ContractNumber);
 
         jLabel23.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 102, 153));
@@ -344,7 +349,7 @@ public class Sales_Order extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(287, 287, 287)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(101, 101, 101)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(182, Short.MAX_VALUE))
@@ -393,7 +398,7 @@ public class Sales_Order extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25))))
         );
@@ -488,12 +493,61 @@ public class Sales_Order extends javax.swing.JFrame {
 
     private void jButtonShowTable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTable2ActionPerformed
         // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+        Sales_Order_Table Sales_OrderInsertTableGo = new Sales_Order_Table();
+        Sales_OrderInsertTableGo.setVisible(true);
 
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_jButtonShowTable2ActionPerformed
+
+    private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
+try {
+    // Get data for Sales Order table
+    int soID = Integer.parseInt(jTextPane5SalesOrderID.getText().trim()); // Ensure input is a valid integer
+    String officeIDText = jTextPane1OfficeID.getText().trim(); // Get Office ID as string
+    Integer officeID2 = null; // Use Integer object to allow null
+
+    // Parse Office ID only if it's not empty
+    if (!officeIDText.isEmpty()) {
+        officeID2 = Integer.parseInt(officeIDText);
+    }
+
+    // Get data for SO Description table
+    String status = jTextPane6Status.getText().trim();
+    String date = jTextPane2Date.getText().trim(); // Ensure the format matches your database's DATE column format
+    int contractNumber = Integer.parseInt(jTextPane4ContractNumber.getText().trim()); // Ensure input is a valid integer
+    String salesOrderDescription = jTextArea1SalesOrderDescription.getText().trim();
+
+    // Create an instance of insert class for SO Description
+    Sales_OrderDescriptionInsert1 salesOrderDescriptionInsert = new Sales_OrderDescriptionInsert1();
+
+    // Conditionally insert into Sales Order table only if Office ID is provided
+    if (officeID2 != null) {
+        Sales_OrderInsert salesOrderInsert = new Sales_OrderInsert();
+        salesOrderInsert.insertSalesOrder(soID, officeID2);
+        System.out.println("Inserted into Sales Order table.");
+    } else {
+        System.out.println("Office ID is empty. Skipping insertion into Sales Order table.");
+    }
+
+    // Always insert into SO Description table
+    salesOrderDescriptionInsert.insertSalesOrderDescription(soID, status, date, contractNumber, salesOrderDescription);
+    System.out.println("Inserted into SO Description table.");
+
+    // Optional: Show confirmation message
+    javax.swing.JOptionPane.showMessageDialog(this, "Sales Order and Description added successfully!");
+
+} catch (NumberFormatException e) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Invalid input. Please check your data.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+} catch (Exception e) {
+    e.printStackTrace(); // Print stack trace for debugging
+    javax.swing.JOptionPane.showMessageDialog(this, "An error occurred: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+}
+
+
+
+
+    }//GEN-LAST:event_SaveButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -536,10 +590,10 @@ public class Sales_Order extends javax.swing.JFrame {
     private javax.swing.JButton OrderItemButton2;
     private javax.swing.JButton PurchaseOrderButton2;
     private javax.swing.JButton SaleOrderButton2;
+    private javax.swing.JButton SaveButton;
     private javax.swing.JButton WorksOnButton2;
     private javax.swing.JButton employeePage2;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonShowTable2;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -560,12 +614,12 @@ public class Sales_Order extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
+    private javax.swing.JTextArea jTextArea1SalesOrderDescription;
+    private javax.swing.JTextPane jTextPane1OfficeID;
+    private javax.swing.JTextPane jTextPane2Date;
+    private javax.swing.JTextPane jTextPane4ContractNumber;
+    private javax.swing.JTextPane jTextPane5SalesOrderID;
+    private javax.swing.JTextPane jTextPane6Status;
     private javax.swing.JButton officeButton2;
     // End of variables declaration//GEN-END:variables
 }

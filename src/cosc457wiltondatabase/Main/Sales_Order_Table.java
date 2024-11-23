@@ -42,7 +42,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         jScrollPane1EmployeeTableShow2 = new javax.swing.JScrollPane();
         BacktoInsert2 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        jButtonShowTable2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -241,17 +240,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 51, 102));
         jLabel17.setText("Sales Order Table");
 
-        jButtonShowTable2.setBackground(new java.awt.Color(0, 102, 153));
-        jButtonShowTable2.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
-        jButtonShowTable2.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonShowTable2.setText("Show Table");
-        jButtonShowTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButtonShowTable2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonShowTable2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -265,11 +253,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
                         .addGap(48, 48, 48)
                         .addComponent(jLabel17)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(440, 440, 440)
-                    .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(441, Short.MAX_VALUE)))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,11 +262,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(298, 298, 298)
-                    .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(298, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -360,15 +338,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsert2ActionPerformed
 
-    private void jButtonShowTable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTable2ActionPerformed
-        // Create an instance of EmployeeTable and display it
-        Sales_Order_Table sales_Order_Table = new Sales_Order_Table();
-        sales_Order_Table.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_jButtonShowTable2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -413,7 +382,6 @@ public class Sales_Order_Table extends javax.swing.JFrame {
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButtonShowTable2;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;

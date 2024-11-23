@@ -42,7 +42,6 @@ public class Accepts_Table extends javax.swing.JFrame {
         jScrollPane1EmployeeTableShow = new javax.swing.JScrollPane();
         BacktoInsert = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButtonShowTable = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -241,17 +240,6 @@ public class Accepts_Table extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 51, 102));
         jLabel1.setText("Accepts Table");
 
-        jButtonShowTable.setBackground(new java.awt.Color(0, 102, 153));
-        jButtonShowTable.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
-        jButtonShowTable.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonShowTable.setText("Show Table");
-        jButtonShowTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButtonShowTable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonShowTableActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -265,11 +253,6 @@ public class Accepts_Table extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(440, 440, 440)
-                    .addComponent(jButtonShowTable, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(441, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,11 +262,6 @@ public class Accepts_Table extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(298, 298, 298)
-                    .addComponent(jButtonShowTable, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(298, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -360,15 +338,6 @@ public class Accepts_Table extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsertActionPerformed
 
-    private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
-        // Create an instance of EmployeeTable and display it
-        Accepts_Table acceptsTable = new Accepts_Table();
-        acceptsTable.setVisible(true);
-
-        // Close the current Employee UI
-        this.dispose();
-    }//GEN-LAST:event_jButtonShowTableActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -413,7 +382,6 @@ public class Accepts_Table extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButtonShowTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

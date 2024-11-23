@@ -743,13 +743,6 @@
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="440" max="-2" attributes="0"/>
-                      <Component id="jButtonShowTable1" min="-2" pref="103" max="-2" attributes="0"/>
-                      <EmptySpace pref="441" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -760,13 +753,6 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="26" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
-                      <Component id="jButtonShowTable1" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace pref="298" max="32767" attributes="0"/>
-                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -842,28 +828,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Customer Table"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButtonShowTable1">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="66" red="0" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Leelawadee UI" size="12" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Show Table"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder/>
-              </Border>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonShowTable1ActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
