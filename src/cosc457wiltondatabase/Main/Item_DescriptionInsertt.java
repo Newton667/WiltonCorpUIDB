@@ -21,7 +21,7 @@ public class Item_DescriptionInsertt {
             Connection con = DriverManager.getConnection(SERVER, ID, PW);
 
             // SQL query to insert into Item Description table
-            String insertItemDescriptionSQL = "INSERT INTO `Item Description` (itemDesc, itemStatus, invoiceStatus, Cost, Quantity, ItemDescriptioncol, SOItem2) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String insertItemDescriptionSQL = "INSERT INTO `Item Description` (itemDesc, itemStatus, invoiceStatus, Cost, Quantity, SOItem2) VALUES (?, ?, ?, ?, ?, ?)";
             try (PreparedStatement pstmt = con.prepareStatement(insertItemDescriptionSQL)) {
                 // Set parameters
                 pstmt.setString(1, itemDesc); // Item Description
@@ -30,7 +30,7 @@ public class Item_DescriptionInsertt {
                 pstmt.setDouble(4, cost); // Cost
                 pstmt.setInt(5, quantity); // Quantity
                 //pstmt.setString(6, itemDescriptioncol); // Item Description Column
-                pstmt.setInt(7, soItem2); // Sales Order Item Foreign Key
+                pstmt.setInt(6, soItem2); // Sales Order Item Foreign Key
 
                 // Execute update
                 int rowsInserted = pstmt.executeUpdate();

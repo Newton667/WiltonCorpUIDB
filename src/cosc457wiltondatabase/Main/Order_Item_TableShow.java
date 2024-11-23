@@ -11,7 +11,7 @@ public class Order_Item_TableShow {
     public DefaultTableModel getSalesOrderItemTableModel() {
         // Define table headers for Sales Order Item table
         DefaultTableModel model = new DefaultTableModel(
-            new String[]{"SOItem", "SO_ID"}, 
+            new String[]{"SOItem", "SO_IDSaleTable"}, 
             0
         );
         
@@ -21,14 +21,14 @@ public class Order_Item_TableShow {
             Statement stmt = con.createStatement();
 
             // SQL query to select data from Sales Order Item table
-            String query = "SELECT SOItem, SO_ID FROM `Sales Order Item`";
+            String query = "SELECT SOItem, SO_IDSaleTable FROM `Sales Order Item`";
 
             ResultSet rs = stmt.executeQuery(query);
 
             // Populate the table model with data from the result set
             while (rs.next()) {
                 int soItem = rs.getInt("SOItem");
-                int soID = rs.getInt("SO_ID");
+                int soID = rs.getInt("SO_IDSaleTable");
 
                 model.addRow(new Object[]{soItem, soID});
             }

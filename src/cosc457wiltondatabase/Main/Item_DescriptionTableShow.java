@@ -11,7 +11,7 @@ public class Item_DescriptionTableShow {
     public DefaultTableModel getItemDescriptionTableModel() {
         // Define table headers for Item Description table
         DefaultTableModel model = new DefaultTableModel(
-            new String[]{"itemDesc", "itemStatus", "invoiceStatus", "Cost", "Quantity", "ItemDescriptioncol", "SOItem2"}, 
+            new String[]{"itemDesc", "itemStatus", "invoiceStatus", "Cost", "Quantity", "SOItem2"}, 
             0
         );
         
@@ -21,7 +21,7 @@ public class Item_DescriptionTableShow {
             Statement stmt = con.createStatement();
 
             // SQL query to select data from Item Description table
-            String query = "SELECT itemDesc, itemStatus, invoiceStatus, Cost, Quantity, ItemDescriptioncol, SOItem2 FROM `Item Description`";
+            String query = "SELECT itemDesc, itemStatus, invoiceStatus, Cost, Quantity, SOItem2 FROM `Item Description`";
 
             ResultSet rs = stmt.executeQuery(query);
 
@@ -32,10 +32,10 @@ public class Item_DescriptionTableShow {
                 String invoiceStatus = rs.getString("invoiceStatus");
                 double cost = rs.getDouble("Cost");
                 int quantity = rs.getInt("Quantity");
-                String itemDescriptionCol = rs.getString("ItemDescriptioncol");
+
                 int soItem2 = rs.getInt("SOItem2");
 
-                model.addRow(new Object[]{itemDesc, itemStatus, invoiceStatus, cost, quantity, itemDescriptionCol, soItem2});
+                model.addRow(new Object[]{itemDesc, itemStatus, invoiceStatus, cost, quantity, soItem2});
             }
 
             con.close();
