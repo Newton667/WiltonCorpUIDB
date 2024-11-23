@@ -4,6 +4,8 @@
  */
 package cosc457wiltondatabase.Main;
 
+import javax.swing.JTable;
+
 /**
  *
  * @author Sara
@@ -15,6 +17,10 @@ public class Order_Item_Table extends javax.swing.JFrame {
      */
     public Order_Item_Table() {
         initComponents();
+        populateSalesOrderItemTable();
+        populateItemDescriptionTable();
+        populateShopDrawingTable();
+        
     }
 
     /**
@@ -40,10 +46,10 @@ public class Order_Item_Table extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jScrollPane1EmployeeTableShow2 = new javax.swing.JScrollPane();
-        jScrollPane1EmployeeTableShow3 = new javax.swing.JScrollPane();
+        jScrollPane1OrderItemTable = new javax.swing.JScrollPane();
         jScrollPane1EmployeeTableShow4 = new javax.swing.JScrollPane();
-        jScrollPane1EmployeeTableShow5 = new javax.swing.JScrollPane();
-        jScrollPane1EmployeeTableShow6 = new javax.swing.JScrollPane();
+        jScrollPane1ItemDescriptionTable = new javax.swing.JScrollPane();
+        jScrollPane1ShopDrawingTable = new javax.swing.JScrollPane();
         jLabel17 = new javax.swing.JLabel();
         jButtonShowTable2 = new javax.swing.JButton();
         BacktoInsert2 = new javax.swing.JButton();
@@ -213,9 +219,9 @@ public class Order_Item_Table extends javax.swing.JFrame {
 
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jScrollPane1EmployeeTableShow2.setViewportView(jScrollPane1EmployeeTableShow3);
+        jScrollPane1EmployeeTableShow2.setViewportView(jScrollPane1OrderItemTable);
 
-        jScrollPane1EmployeeTableShow4.setViewportView(jScrollPane1EmployeeTableShow5);
+        jScrollPane1EmployeeTableShow4.setViewportView(jScrollPane1ItemDescriptionTable);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -227,7 +233,7 @@ public class Order_Item_Table extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1EmployeeTableShow4, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1EmployeeTableShow6, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1ShopDrawingTable, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
@@ -236,7 +242,7 @@ public class Order_Item_Table extends javax.swing.JFrame {
             .addComponent(jScrollPane1EmployeeTableShow4)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1EmployeeTableShow6, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1ShopDrawingTable, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel17.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 36)); // NOI18N
@@ -408,6 +414,43 @@ public class Order_Item_Table extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonShowTable2ActionPerformed
 
+    private void populateSalesOrderItemTable() {
+    // Create an instance of Order_Item_TableShow
+    Order_Item_TableShow orderItemTableShow = new Order_Item_TableShow();
+    
+    // Create a JTable using the DefaultTableModel from Order_Item_TableShow
+    JTable salesOrderItemTable = new JTable(orderItemTableShow.getSalesOrderItemTableModel());
+    
+    // Set the JTable as the view for jScrollPaneSalesOrderItemTable
+    jScrollPane1OrderItemTable.setViewportView(salesOrderItemTable);
+}
+
+private void populateItemDescriptionTable() {
+    // Create an instance of Item_DescriptionTableShow
+    Item_DescriptionTableShow itemDescriptionTableShow = new Item_DescriptionTableShow();
+    
+    // Create a JTable using the DefaultTableModel from Item_DescriptionTableShow
+    JTable itemDescriptionTable = new JTable(itemDescriptionTableShow.getItemDescriptionTableModel());
+    
+    // Set the JTable as the view for jScrollPaneItemDescriptionTable
+    jScrollPane1ItemDescriptionTable.setViewportView(itemDescriptionTable);
+}
+
+private void populateShopDrawingTable() {
+    // Create an instance of ShopDrawingTableShow
+    ShopDrawingTableShow shopDrawingTableShow = new ShopDrawingTableShow();
+    
+    // Create a JTable using the DefaultTableModel from ShopDrawingTableShow
+    JTable shopDrawingTable = new JTable(shopDrawingTableShow.getShopDrawingTableModel());
+    
+    // Set the JTable as the view for jScrollPaneShopDrawingTable
+    jScrollPane1ShopDrawingTable.setViewportView(shopDrawingTable);
+}
+
+    
+    
+   
+    
     /**
      * @param args the command line arguments
      */
@@ -462,10 +505,10 @@ public class Order_Item_Table extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JScrollPane jScrollPane1EmployeeTableShow2;
-    private javax.swing.JScrollPane jScrollPane1EmployeeTableShow3;
     private javax.swing.JScrollPane jScrollPane1EmployeeTableShow4;
-    private javax.swing.JScrollPane jScrollPane1EmployeeTableShow5;
-    private javax.swing.JScrollPane jScrollPane1EmployeeTableShow6;
+    private javax.swing.JScrollPane jScrollPane1ItemDescriptionTable;
+    private javax.swing.JScrollPane jScrollPane1OrderItemTable;
+    private javax.swing.JScrollPane jScrollPane1ShopDrawingTable;
     private javax.swing.JButton officeButton6;
     // End of variables declaration//GEN-END:variables
 }

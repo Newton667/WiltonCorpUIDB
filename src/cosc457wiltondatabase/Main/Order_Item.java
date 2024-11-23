@@ -41,36 +41,36 @@ public class Order_Item extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        jTextPane5SalesOrderID = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        jTextPane6ItemStatus = new javax.swing.JTextPane();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        Save = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jButtonShowTable2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea1ItemDecription = new javax.swing.JTextArea();
         jLabel19 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        jTextPane1SalesOrderItem = new javax.swing.JTextPane();
         jLabel20 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        jTextPane2InvoiceStatus = new javax.swing.JTextPane();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        jTextPane3Cost = new javax.swing.JTextPane();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        jTextPane4Quantity = new javax.swing.JTextPane();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        jTextPane7DrawID = new javax.swing.JTextPane();
         jLabel25 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        jTextPane8DrawingStatus = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -238,9 +238,9 @@ public class Order_Item extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 102)));
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(jTextPane5SalesOrderID);
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(jTextPane6ItemStatus);
 
         jLabel16.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 102, 153));
@@ -250,12 +250,17 @@ public class Order_Item extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 102, 153));
         jLabel17.setText("Item Description");
 
-        jButton9.setBackground(new java.awt.Color(0, 102, 153));
-        jButton9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Save");
-        jButton9.setToolTipText("");
-        jButton9.setBorder(null);
+        Save.setBackground(new java.awt.Color(0, 102, 153));
+        Save.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        Save.setForeground(new java.awt.Color(255, 255, 255));
+        Save.setText("Save");
+        Save.setToolTipText("");
+        Save.setBorder(null);
+        Save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(0, 102, 153));
         jButton10.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -284,33 +289,33 @@ public class Order_Item extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1ItemDecription.setColumns(20);
+        jTextArea1ItemDecription.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1ItemDecription);
 
         jLabel19.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 102, 153));
         jLabel19.setText("Sales Order Item");
 
-        jScrollPane2.setViewportView(jTextPane1);
+        jScrollPane2.setViewportView(jTextPane1SalesOrderItem);
 
         jLabel20.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 102, 153));
         jLabel20.setText("Invoice Status");
 
-        jScrollPane3.setViewportView(jTextPane2);
+        jScrollPane3.setViewportView(jTextPane2InvoiceStatus);
 
         jLabel21.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 102, 153));
         jLabel21.setText("Cost");
 
-        jScrollPane4.setViewportView(jTextPane3);
+        jScrollPane4.setViewportView(jTextPane3Cost);
 
         jLabel22.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 102, 153));
         jLabel22.setText("Quantity");
 
-        jScrollPane7.setViewportView(jTextPane4);
+        jScrollPane7.setViewportView(jTextPane4Quantity);
 
         jLabel23.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 102, 153));
@@ -319,13 +324,13 @@ public class Order_Item extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(0, 102, 153));
         jLabel24.setText("Draw ID");
 
-        jScrollPane8.setViewportView(jTextPane7);
+        jScrollPane8.setViewportView(jTextPane7DrawID);
 
         jLabel25.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(0, 102, 153));
         jLabel25.setText("Drawing Status");
 
-        jScrollPane9.setViewportView(jTextPane8);
+        jScrollPane9.setViewportView(jTextPane8DrawingStatus);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -381,7 +386,7 @@ public class Order_Item extends javax.swing.JFrame {
                         .addGap(112, 112, 112)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(101, 101, 101)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(182, Short.MAX_VALUE))
@@ -447,7 +452,7 @@ public class Order_Item extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25))))
         );
@@ -495,7 +500,11 @@ public class Order_Item extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OrderItemButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButton2ActionPerformed
-        // TODO add your handling code here:
+        Order_Item goToOrder_Item = new Order_Item();
+        goToOrder_Item.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_OrderItemButton2ActionPerformed
 
     private void AssignTaskButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButton2ActionPerformed
@@ -503,7 +512,11 @@ public class Order_Item extends javax.swing.JFrame {
     }//GEN-LAST:event_AssignTaskButton2ActionPerformed
 
     private void SaleOrderButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButton2ActionPerformed
-        // TODO add your handling code here:
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButton2ActionPerformed
 
     private void officeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButton2ActionPerformed
@@ -549,6 +562,73 @@ public class Order_Item extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonShowTable2ActionPerformed
 
+    private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
+try {
+    // Get data for Item_Description table
+    String itemDesc = jTextArea1ItemDecription.getText().trim(); // Item description
+    String itemStatus = jTextPane6ItemStatus.getText().trim(); // Item status
+    String invoiceStatus = jTextPane2InvoiceStatus.getText().trim(); // Invoice status
+    String costText = jTextPane3Cost.getText().trim(); // Cost
+    String quantityText = jTextPane4Quantity.getText().trim(); // Quantity
+    //String itemDescriptionCol = jTextPaneItemDescriptionCol.getText().trim(); // Additional description
+    String soItem2Text = jTextPane1SalesOrderItem.getText().trim(); // Foreign key for SOItem2
+
+    // Get data for ShopDrawing table
+    String drawIDText = jTextPane7DrawID.getText().trim(); // Drawing ID
+    String drawingStatus = jTextPane8DrawingStatus.getText().trim(); // Status for ShopDrawing
+    String itemDesc2 = jTextArea1ItemDecription.getText().trim(); // Foreign key for itemDesc2
+
+    // Get data for Order_Item table
+    String soItemText = jTextPane1SalesOrderItem.getText().trim(); // Primary key for Order_Item
+    String soIDText = jTextPane5SalesOrderID.getText().trim(); // Foreign key for SO_ID in Order_Item
+
+    // Convert numeric values where necessary
+    double cost = costText.isEmpty() ? 0.0 : Double.parseDouble(costText);
+    int quantity = quantityText.isEmpty() ? 0 : Integer.parseInt(quantityText);
+    int soItem2 = soItem2Text.isEmpty() ? 0 : Integer.parseInt(soItem2Text);
+    int drawID = drawIDText.isEmpty() ? 0 : Integer.parseInt(drawIDText);
+    int soItem = soItemText.isEmpty() ? 0 : Integer.parseInt(soItemText);
+    int soID = soIDText.isEmpty() ? 0 : Integer.parseInt(soIDText);
+
+    // Insert into Item_Description table if any relevant data is provided
+    if (!itemDesc.isEmpty() || !itemStatus.isEmpty() || !invoiceStatus.isEmpty() || cost > 0 || quantity > 0 || soItem2 > 0) {
+        Item_DescriptionInsertt itemDescriptionInsert = new Item_DescriptionInsertt();
+        itemDescriptionInsert.insertItemDescription(itemDesc, itemStatus, invoiceStatus, cost, quantity, soItem2);
+        System.out.println("Inserted into Item_Description table.");
+    } else {
+        System.out.println("No data provided for Item_Description table. Skipping insertion.");
+    }
+
+    // Insert into ShopDrawing table if relevant data is provided
+    if (drawID > 0 || !drawingStatus.isEmpty() || !itemDesc2.isEmpty()) {
+        ShopDrawingInsert shopDrawingInsert = new ShopDrawingInsert();
+        shopDrawingInsert.insertShopDrawing(drawID, drawingStatus, itemDesc2);
+        System.out.println("Inserted into ShopDrawing table.");
+    } else {
+        System.out.println("No data provided for ShopDrawing table. Skipping insertion.");
+    }
+
+    // Insert into Order_Item table if relevant data is provided
+    if (soItem > 0 && soID > 0) {
+        Order_ItemInsert orderItemInsert = new Order_ItemInsert();
+        orderItemInsert.insertOrderItem(soItem, soID);
+        System.out.println("Inserted into Order_Item table.");
+    } else {
+        System.out.println("Insufficient data for Order_Item table. Skipping insertion.");
+    }
+
+    // Show confirmation message
+    javax.swing.JOptionPane.showMessageDialog(this, "Order_Item, Item_Description, and ShopDrawing processed successfully!");
+
+} catch (NumberFormatException e) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Invalid numeric input. Please check your data.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+} catch (Exception e) {
+    e.printStackTrace(); // Print stack trace for debugging
+    javax.swing.JOptionPane.showMessageDialog(this, "An error occurred: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+}
+
+    }//GEN-LAST:event_SaveActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -590,10 +670,10 @@ public class Order_Item extends javax.swing.JFrame {
     private javax.swing.JButton OrderItemButton2;
     private javax.swing.JButton PurchaseOrderButton2;
     private javax.swing.JButton SaleOrderButton2;
+    private javax.swing.JButton Save;
     private javax.swing.JButton WorksOnButton2;
     private javax.swing.JButton employeePage2;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonShowTable2;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -620,15 +700,15 @@ public class Order_Item extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
-    private javax.swing.JTextPane jTextPane8;
+    private javax.swing.JTextArea jTextArea1ItemDecription;
+    private javax.swing.JTextPane jTextPane1SalesOrderItem;
+    private javax.swing.JTextPane jTextPane2InvoiceStatus;
+    private javax.swing.JTextPane jTextPane3Cost;
+    private javax.swing.JTextPane jTextPane4Quantity;
+    private javax.swing.JTextPane jTextPane5SalesOrderID;
+    private javax.swing.JTextPane jTextPane6ItemStatus;
+    private javax.swing.JTextPane jTextPane7DrawID;
+    private javax.swing.JTextPane jTextPane8DrawingStatus;
     private javax.swing.JButton officeButton2;
     // End of variables declaration//GEN-END:variables
 }

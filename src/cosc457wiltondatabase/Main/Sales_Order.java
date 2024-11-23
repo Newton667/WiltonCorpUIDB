@@ -446,7 +446,11 @@ public class Sales_Order extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OrderItemButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButton2ActionPerformed
-        // TODO add your handling code here:
+        Order_Item goToOrder_Item = new Order_Item();
+        goToOrder_Item.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_OrderItemButton2ActionPerformed
 
     private void AssignTaskButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButton2ActionPerformed
