@@ -31,7 +31,7 @@ public class Employee extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        OrderItem = new javax.swing.JButton();
         AssignTaskButton = new javax.swing.JButton();
         saleOrderButton = new javax.swing.JButton();
         employeePage = new javax.swing.JButton();
@@ -68,15 +68,15 @@ public class Employee extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
         jLabel3.setText("WILTON");
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 153));
-        jButton1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 51));
-        jButton1.setText("Order Item");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        OrderItem.setBackground(new java.awt.Color(0, 102, 153));
+        OrderItem.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        OrderItem.setForeground(new java.awt.Color(0, 0, 51));
+        OrderItem.setText("Order Item");
+        OrderItem.setToolTipText("");
+        OrderItem.setBorder(null);
+        OrderItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                OrderItemActionPerformed(evt);
             }
         });
 
@@ -171,7 +171,7 @@ public class Employee extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(saleOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(OrderItem, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(AssignTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -200,7 +200,7 @@ public class Employee extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(employeePage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(saleOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OrderItem, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AssignTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -387,9 +387,11 @@ public class Employee extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void OrderItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemActionPerformed
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_OrderItemActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
         Assign_Task task = new Assign_Task();
@@ -513,10 +515,10 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JButton AssignTaskButton;
     private javax.swing.JButton CustomerButton;
     private javax.swing.JButton OfficeButton;
+    private javax.swing.JButton OrderItem;
     private javax.swing.JButton PurchaseOrderButton;
     private javax.swing.JButton WorksOnButton;
     private javax.swing.JButton employeePage;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton5CancelButton;
     private javax.swing.JButton jButton6SaveButton;
     private javax.swing.JButton jButtonShowTable;
