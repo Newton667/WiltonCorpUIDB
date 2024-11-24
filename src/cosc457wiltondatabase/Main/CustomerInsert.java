@@ -30,7 +30,7 @@ public class CustomerInsert {
             Connection con = DriverManager.getConnection(SERVER, ID, PW);
 
             // Prepare SQL query
-            String insertCustomerSQL = "INSERT INTO along28db.Customer (CustomerID, Name, Location) VALUES (?, ?, ?)";
+            String insertCustomerSQL = "INSERT INTO along28db.Customer (Customer_ID, Name, Location) VALUES (?, ?, ?)";
             try (PreparedStatement pstmt = con.prepareStatement(insertCustomerSQL)) {
                 // Set query parameters
                 pstmt.setInt(1, customerID);
