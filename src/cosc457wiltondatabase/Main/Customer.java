@@ -439,6 +439,10 @@ public class Customer extends javax.swing.JFrame {
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
         // TODO add your handling code here:
+          Customer customer = new Customer();
+        customer.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -447,8 +451,8 @@ public class Customer extends javax.swing.JFrame {
 
     private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
         // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+        CustomerTable customerTable = new CustomerTable();
+        customerTable.setVisible(true);
 
         // Close the current Employee UI
         this.dispose();
