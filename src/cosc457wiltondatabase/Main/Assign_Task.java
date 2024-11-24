@@ -246,6 +246,11 @@ public class Assign_Task extends javax.swing.JFrame {
         jButton5.setText("Save");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(0, 102, 153));
         jButton6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -392,14 +397,25 @@ public class Assign_Task extends javax.swing.JFrame {
 
     private void OrderItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButtonActionPerformed
         // TODO add your handling code here:
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_OrderItemButtonActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
         // TODO add your handling code here:
+         Assign_Task task = new Assign_Task();
+        task.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
     private void SaleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButtonActionPerformed
         // TODO add your handling code here:
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButtonActionPerformed
 
     private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
@@ -423,14 +439,29 @@ public class Assign_Task extends javax.swing.JFrame {
 
     private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
         // TODO add your handling code here:
+         Purchase_Order PO = new Purchase_Order();
+        PO.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_PurchaseOrderButtonActionPerformed
 
     private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
         // TODO add your handling code here:
+          // TODO add your handling code here:
+        Works_On works_On = new Works_On();
+        works_On.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
         // TODO add your handling code here:
+        Customer customer = new Customer();
+        customer.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -439,12 +470,27 @@ public class Assign_Task extends javax.swing.JFrame {
 
     private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
         // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+        Assign_Task_Table assignTaskTable = new Assign_Task_Table();
+        assignTaskTable.setVisible(true);
 
-        // Close the current Employee UI
+        
         this.dispose();
     }//GEN-LAST:event_jButtonShowTableActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        int Task_ID = Integer.parseInt(jTextPane1.getText());
+        int OfficeID2 = Integer.parseInt(jTextPane2.getText());
+        int EMP_ID2 = Integer.parseInt(jTextPane3.getText());
+        String Description = jTextArea1.getText();
+        
+        Assign_TaskInsert taskInsert = new Assign_TaskInsert();
+        taskInsert.insertAssignTask(Task_ID, OfficeID2, EMP_ID2, Description);
+        
+        //Confirmation Message
+        javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
