@@ -246,6 +246,11 @@ public class Customer extends javax.swing.JFrame {
         jButton5.setText("Save");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(0, 102, 153));
         jButton6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -392,14 +397,27 @@ public class Customer extends javax.swing.JFrame {
 
     private void OrderItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButtonActionPerformed
         // TODO add your handling code here:
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_OrderItemButtonActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
         // TODO add your handling code here:
+         Assign_Task task = new Assign_Task();
+        task.setVisible(true);
+        
+        // Close the current Customer UI
+        this.dispose();
     }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
     private void SaleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButtonActionPerformed
         // TODO add your handling code here:
+         Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        // Close the current Customer UI
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButtonActionPerformed
 
     private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
@@ -407,7 +425,7 @@ public class Customer extends javax.swing.JFrame {
         Customer goToCustomer = new Customer();
         goToCustomer.setVisible(true);
 
-        // Close the current Employee UI
+        
         this.dispose();
     }//GEN-LAST:event_officeButtonActionPerformed
 
@@ -416,16 +434,26 @@ public class Customer extends javax.swing.JFrame {
         Employee employeeBack = new Employee();
         employeeBack.setVisible(true);
 
-        // Close the current Employee UI
+     
         this.dispose();
     }//GEN-LAST:event_employeePageActionPerformed
 
     private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
         // TODO add your handling code here:
+          Purchase_Order PO = new Purchase_Order();
+        PO.setVisible(true);
+
+        
+        this.dispose();
     }//GEN-LAST:event_PurchaseOrderButtonActionPerformed
 
     private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
         // TODO add your handling code here:
+         Works_On works_On = new Works_On();
+        works_On.setVisible(true);
+
+        
+        this.dispose();
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
@@ -444,6 +472,21 @@ public class Customer extends javax.swing.JFrame {
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_jButtonShowTableActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        // Retrieve data from text fields
+    int customerID = Integer.parseInt(jTextPane1.getText()); // Ensure valid integer input
+    String customerName = jTextPane2.getText();
+    String customerLocation = jTextPane3.getText();
+
+    // Create an instance of CustomerInsert and insert the customer
+    CustomerInsert customerInsert = new CustomerInsert();
+    customerInsert.insertCustomer(customerID, customerName, customerLocation);
+
+    // Optional: Show a confirmation message
+    javax.swing.JOptionPane.showMessageDialog(this, "Customer added successfully!");
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
