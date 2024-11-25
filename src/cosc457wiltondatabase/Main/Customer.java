@@ -403,10 +403,10 @@ public class Customer extends javax.swing.JFrame {
 
     private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
         // TODO add your handling code here:
-        Customer goToCustomer = new Customer();
-        goToCustomer.setVisible(true);
-
+        Office goToOffice = new Office();
+        goToOffice.setVisible(true);
         
+        // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_officeButtonActionPerformed
 

@@ -241,6 +241,11 @@ public class Works_On extends javax.swing.JFrame {
         jButton5.setText("Save");
         jButton5.setToolTipText("");
         jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(0, 102, 153));
         jButton6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -389,6 +394,9 @@ public class Works_On extends javax.swing.JFrame {
 
     private void OrderItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButtonActionPerformed
         // TODO add your handling code here:
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_OrderItemButtonActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
@@ -401,6 +409,11 @@ public class Works_On extends javax.swing.JFrame {
 
     private void SaleOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButtonActionPerformed
         // TODO add your handling code here:
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButtonActionPerformed
 
     private void officeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButtonActionPerformed
@@ -422,10 +435,21 @@ public class Works_On extends javax.swing.JFrame {
 
     private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
         // TODO add your handling code here:
+         Purchase_Order PO = new Purchase_Order();
+        PO.setVisible(true);
+
+        
+        this.dispose();
+        
     }//GEN-LAST:event_PurchaseOrderButtonActionPerformed
 
     private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
         // TODO add your handling code here:
+         Works_On works_On = new Works_On();
+        works_On.setVisible(true);
+
+        
+        this.dispose();
         
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
@@ -443,7 +467,11 @@ public class Works_On extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
-        
+         Works_On_Table works_onTable = new Works_On_Table();
+        works_onTable.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_jButtonShowTableActionPerformed
 
     private void SearchByIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchByIDActionPerformed
@@ -475,6 +503,54 @@ public class Works_On extends javax.swing.JFrame {
                                                   "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
     }
     }//GEN-LAST:event_SearchByIDActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        try {
+        int employeeID = Integer.parseInt(jTextPane1.getText().trim()); // Get Employee ID from text field
+        int salesOrderID = Integer.parseInt(jTextPane2.getText().trim()); // Get Sales Order ID from text field
+        String description = jTextArea1.getText().trim(); // Get Description from text area
+
+        // Validate input (Optional step to ensure proper data handling)
+        if (employeeID <= 0 || salesOrderID <= 0 || description.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "Please fill all fields with valid data!", 
+                "Input Error", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Create an instance of Works_On_Insert (Database Insert class)
+        Works_OnInsert worksOnInsert = new Works_OnInsert();
+        worksOnInsert.insertWorksOn(employeeID, salesOrderID, description); // Call the database insert method
+
+        // Show success message
+        javax.swing.JOptionPane.showMessageDialog(this, 
+            "Data saved successfully!", 
+            "Success", 
+            javax.swing.JOptionPane.INFORMATION_MESSAGE);
+
+        // Clear the fields (Optional)
+        jTextPane1.setText("");
+        jTextPane2.setText("");
+        jTextArea1.setText("");
+
+    } catch (NumberFormatException e) {
+        // Handle number format exceptions for Employee ID or Sales Order ID
+        javax.swing.JOptionPane.showMessageDialog(this, 
+            "Please enter valid numeric values for Employee ID and Sales Order ID!", 
+            "Input Error", 
+            javax.swing.JOptionPane.ERROR_MESSAGE);
+    } catch (Exception e) {
+        // Handle general errors (e.g., database connection issues)
+        e.printStackTrace();
+        javax.swing.JOptionPane.showMessageDialog(this, 
+            "An error occurred while saving data. Please try again.", 
+            "Error", 
+            javax.swing.JOptionPane.ERROR_MESSAGE);
+    }
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void showResultsInPopup(DefaultTableModel model) {
     // Create a JDialog for displaying the results
