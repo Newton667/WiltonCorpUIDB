@@ -33,7 +33,7 @@ public class Works_OnInsert {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(SERVER, ID, PW);
 
-            String insertWorks_Onsql = "INSERT INTO Works_On (EmpID, SO_ID2, Description) VALUES (?, ?, ?)";
+            String insertWorks_Onsql = "INSERT INTO along28db.WorksOn (EmpID, SO_ID2, Description) VALUES (?, ?, ?)";
             PreparedStatement pstmt = con.prepareStatement(insertWorks_Onsql);
             pstmt.setInt(1, empID);
             pstmt.setInt(2, soID2);
