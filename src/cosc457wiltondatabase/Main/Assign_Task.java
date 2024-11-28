@@ -479,13 +479,18 @@ public class Assign_Task extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        int Task_ID = Integer.parseInt(jTextPane1.getText());
-        int OfficeID2 = Integer.parseInt(jTextPane2.getText());
-        int EMP_ID2 = Integer.parseInt(jTextPane3.getText());
+        int Task_ID = Integer.parseInt(jTextPane2.getText());
+        int OfficeID2 = Integer.parseInt(jTextPane3.getText());
+        int EMP_ID2 = Integer.parseInt(jTextPane1.getText());
         String Description = jTextArea1.getText();
         
+        TaskDescriptionInsert descInsert = new TaskDescriptionInsert();
+         descInsert.insertTaskDescription(Task_ID, Description);
+        
         Assign_TaskInsert taskInsert = new Assign_TaskInsert();
-         taskInsert.insertAssignTask(Task_ID, OfficeID2, EMP_ID2, Description);
+         taskInsert.insertAssignTask(Task_ID, OfficeID2, EMP_ID2);
+         
+         
         //Confirmation Message
         javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
         

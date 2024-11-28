@@ -14,7 +14,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Assign_TaskInsert {
+public class TaskDescriptionInsert {
     
     //Error inserting Assign_Task: Unknown column 'Description' in 'field list'
     //I removed the description becuase there is no column for it on workbench
@@ -22,7 +22,7 @@ public class Assign_TaskInsert {
     private static final String PW = "COSC*8zeos";
     private static final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
 
-    public void insertAssignTask(int Task_ID, int OfficeID2, int EMP_ID2) {
+    public void insertTaskDescription(int taskIDDesc, String Description) {
         try {
             // Load MySQL driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,15 +32,15 @@ public class Assign_TaskInsert {
 
             // Prepare SQL query
            // String taskDescQuery = "INSERT INTO TaskDescription (TaskIDDesc, Description) VALUES (?, ?)"; //added
-            String insertAssignTaskSQL = "INSERT INTO along28db.AssignTask (Task_ID, OfficeID2, EMP_ID2) VALUES (?, ?, ?)";
+            String insertAssignTaskSQL = "INSERT INTO along28db.TaskDescription (taskIDDesc, Description) VALUES (?, ?)";
             try (PreparedStatement pstmt = con.prepareStatement(insertAssignTaskSQL)) {
-                pstmt.setInt(1, Task_ID);
-                pstmt.setInt(2, OfficeID2);
-                pstmt.setInt(3, EMP_ID2);
+                pstmt.setInt(1, taskIDDesc);
+                pstmt.setString(2, Description);
+                
                 
 
                 int rowsInserted = pstmt.executeUpdate();
-                System.out.println(rowsInserted + " row(s) inserted into Assign_Task table.");
+                System.out.println(rowsInserted + " row(s) inserted into TaskDescription table.");
             }
         } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Error inserting Assign_Task: " + e.getMessage());
