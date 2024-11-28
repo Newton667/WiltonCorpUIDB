@@ -16,6 +16,8 @@ import java.sql.SQLException;
 
 public class Assign_TaskInsert {
     
+    //Error inserting Assign_Task: Unknown column 'Description' in 'field list'
+    //I removed the description becuase there is no column for it on workbench
     private static final String ID = "along28";
     private static final String PW = "COSC*8zeos";
     private static final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
@@ -29,8 +31,9 @@ public class Assign_TaskInsert {
             Connection con = DriverManager.getConnection(SERVER, ID, PW);
 
             // Prepare SQL query
-            String insertAssign_TaskSQL = "INSERT INTO along28db.Assign_Task (Task_ID, OfficeID2, EMP_ID2, Description) VALUES (?, ?, ?, ?)";
-            try (PreparedStatement pstmt = con.prepareStatement(insertAssign_TaskSQL)) {
+           // String taskDescQuery = "INSERT INTO TaskDescription (TaskIDDesc, Description) VALUES (?, ?)"; //added
+            String insertAssignTaskSQL = "INSERT INTO along28db.AssignTask (Task_ID, OfficeID2, EMP_ID2, Description) VALUES (?, ?, ?, ?)";
+            try (PreparedStatement pstmt = con.prepareStatement(insertAssignTaskSQL)) {
                 pstmt.setInt(1, Task_ID);
                 pstmt.setInt(2, OfficeID2);
                 pstmt.setInt(3, EMP_ID2);
