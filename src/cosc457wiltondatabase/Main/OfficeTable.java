@@ -4,6 +4,8 @@
  */
 package cosc457wiltondatabase.Main;
 
+import javax.swing.JTable;
+
 /**
  *
  * @author Sara
@@ -15,6 +17,7 @@ public class OfficeTable extends javax.swing.JFrame {
      */
     public OfficeTable() {
         initComponents();
+        populateOfficeTable();
     }
 
     /**
@@ -655,6 +658,13 @@ public class OfficeTable extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsert2ActionPerformed
 
+    private void populateOfficeTable() {
+        OfficeShowTable officeTableShow = new OfficeShowTable();
+        JTable officeTable = new JTable(officeTableShow.getOfficeTableModel());
+        
+        // Set the JTable as the view for jScrollPane1EmployeeTableShow
+        jScrollPane1EmployeeTableShow2.setViewportView(officeTable);
+    }
     /**
      * @param args the command line arguments
      */

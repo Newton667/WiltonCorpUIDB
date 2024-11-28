@@ -57,6 +57,7 @@ public class Office extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextPane4EmployeeIDField2 = new javax.swing.JTextPane();
+        ShowTable = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -275,6 +276,16 @@ public class Office extends javax.swing.JFrame {
 
         jScrollPane6.setViewportView(jTextPane4EmployeeIDField2);
 
+        ShowTable.setBackground(new java.awt.Color(0, 102, 153));
+        ShowTable.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 12)); // NOI18N
+        ShowTable.setForeground(new java.awt.Color(255, 255, 255));
+        ShowTable.setText("Show Table");
+        ShowTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShowTableActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -312,6 +323,10 @@ public class Office extends javax.swing.JFrame {
                 .addGap(59, 59, 59)
                 .addComponent(jButton5CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(382, 382, 382))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ShowTable, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,7 +355,9 @@ public class Office extends javax.swing.JFrame {
                             .addComponent(jButton5CancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton6SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(ShowTable, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 36)); // NOI18N
@@ -458,6 +475,14 @@ public class Office extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
+    private void ShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowTableActionPerformed
+       OfficeTable officeTable = new OfficeTable();
+        officeTable.setVisible(true);
+        
+        
+        this.dispose();
+    }//GEN-LAST:event_ShowTableActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -500,6 +525,7 @@ public class Office extends javax.swing.JFrame {
     private javax.swing.JButton OrderItemButton;
     private javax.swing.JButton PurchaseOrderButton;
     private javax.swing.JButton SaleOrderButton;
+    private javax.swing.JButton ShowTable;
     private javax.swing.JButton WorksOnButton;
     private javax.swing.JButton employeePage;
     private javax.swing.JButton jButton5CancelButton;
