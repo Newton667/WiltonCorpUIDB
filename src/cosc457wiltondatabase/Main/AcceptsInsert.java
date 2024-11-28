@@ -21,7 +21,7 @@ public class AcceptsInsert {
     private static final String SERVER = "jdbc:mysql://triton.towson.edu:3360/?serverTimezone=EST#/" + ID + "db";
     
     // Method to insert an Accepts record into the database
-    public void insertAccepts(int officeID, String purchaseOrder, String action) {
+    public void insertAccepts(String action, int PurchaseOrder, int OfficeID) {
         try {
             // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -30,12 +30,12 @@ public class AcceptsInsert {
             Connection con = DriverManager.getConnection(SERVER, ID, PW);
 
             // SQL query to insert a new record into the Accepts table
-            String insertAcceptsSQL = "INSERT INTO along28db.Accepts (OfficeID, PurchaseOrder, Action) VALUES (?, ?, ?)";
+            String insertAcceptsSQL = "INSERT INTO along28db.Accepts (action, PurchaseOrder, OfficeID) VALUES (?, ?, ?)";
             try (PreparedStatement pstmt = con.prepareStatement(insertAcceptsSQL)) {
                 // Set parameters for the SQL query
-                pstmt.setInt(1, officeID);
-                pstmt.setString(2, purchaseOrder);
-                pstmt.setString(3, action);
+                pstmt.setString(1, action);
+                pstmt.setInt(2, PurchaseOrder);
+                pstmt.setInt(3, OfficeID);
 
                 // Execute the query and display the number of rows inserted
                 int rowsInserted = pstmt.executeUpdate();

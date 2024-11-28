@@ -1266,16 +1266,16 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonShowTable2ActionPerformed
 
     private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
-        // TODO add your handling code here:
-       // int officeID = Integer.parseInt(jLabel18.getText());
-        //String purchaseOrder = jLabel16.getText();
-        //String action = jLabel17.getText();
         
-         //AcceptsInsert acceptsInsert = new AcceptsInsert();
-         //acceptsInsert.insertAccepts(officeID, purchaseOrder, action);
+       int OfficeID = Integer.parseInt(OfficeIDTextField.getText());
+        int PurchaseOrder = Integer.parseInt(POTextField.getText());
+        String action = ActionTextField.getText();
+        
+        AcceptsInsert acceptsInsert = new AcceptsInsert();
+         acceptsInsert.insertAccepts(action, PurchaseOrder, OfficeID);
          
-          //Confirmation Message
-        //javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
+          
+        javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
     }//GEN-LAST:event_SaveActionPerformed
 
   
