@@ -444,8 +444,8 @@ public class Purchase_Order extends javax.swing.JFrame {
 
     private void jButtonShowTable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTable2ActionPerformed
         // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+        Purchase_Order_Table poTable = new Purchase_Order_Table();
+        poTable.setVisible(true);
 
         // Close the current Employee UI
         this.dispose();

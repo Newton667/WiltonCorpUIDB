@@ -4,6 +4,8 @@
  */
 package cosc457wiltondatabase.Main;
 
+import javax.swing.JTable;
+
 /**
  *
  * @author Sara
@@ -15,6 +17,7 @@ public class Purchase_Order_Table extends javax.swing.JFrame {
      */
     public Purchase_Order_Table() {
         initComponents();
+        populatePOTable();
     }
 
     /**
@@ -338,6 +341,15 @@ public class Purchase_Order_Table extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsert2ActionPerformed
 
+    
+    
+    private void populatePOTable() {
+        PurchaseOrderShowTable poTableShow = new PurchaseOrderShowTable();
+        JTable poTable = new JTable(poTableShow.getPOTableModel());
+        
+        // Set the JTable as the view for jScrollPane1EmployeeTableShow
+        jScrollPane1EmployeeTableShow2.setViewportView(poTable);
+    }
     /**
      * @param args the command line arguments
      */
