@@ -485,8 +485,7 @@ public class Assign_Task extends javax.swing.JFrame {
         String Description = jTextArea1.getText();
         
         Assign_TaskInsert taskInsert = new Assign_TaskInsert();
-        taskInsert.insertAssignTask(Task_ID, OfficeID2, EMP_ID2, Description);
-        
+         taskInsert.insertAssignTask(Task_ID, OfficeID2, EMP_ID2, Description);
         //Confirmation Message
         javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
         
