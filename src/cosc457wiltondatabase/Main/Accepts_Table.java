@@ -4,6 +4,8 @@
  */
 package cosc457wiltondatabase.Main;
 
+import javax.swing.JTable;
+
 /**
  *
  * @author Sara
@@ -15,6 +17,7 @@ public class Accepts_Table extends javax.swing.JFrame {
      */
     public Accepts_Table() {
         initComponents();
+        populateAcceptsTable();
     }
 
     /**
@@ -338,6 +341,14 @@ public class Accepts_Table extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BacktoInsertActionPerformed
 
+    
+    private void populateAcceptsTable() {
+        AcceptsShowTable acceptsTableShow = new AcceptsShowTable();
+        JTable acceptsTable = new JTable(acceptsTableShow.getAcceptsTableModel());
+        
+        // Set the JTable as the view for jScrollPane1EmployeeTableShow
+        jScrollPane1EmployeeTableShow.setViewportView(acceptsTable);
+    }
     /**
      * @param args the command line arguments
      */

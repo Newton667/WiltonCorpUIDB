@@ -1144,8 +1144,8 @@ public class Accepts extends javax.swing.JFrame {
 
     private void jButtonShowTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTableActionPerformed
         // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+        Accepts_Table acceptsTable = new Accepts_Table();
+        acceptsTable.setVisible(true);
 
         // Close the current Employee UI
         this.dispose();
@@ -1257,9 +1257,9 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButtonShowTable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowTable2ActionPerformed
-        // Create an instance of EmployeeTable and display it
-        EmployeeTable employeeTable = new EmployeeTable();
-        employeeTable.setVisible(true);
+         // Create an instance of EmployeeTable and display it
+        Accepts_Table acceptTable = new Accepts_Table();
+        acceptTable.setVisible(true);
 
         // Close the current Employee UI
         this.dispose();
