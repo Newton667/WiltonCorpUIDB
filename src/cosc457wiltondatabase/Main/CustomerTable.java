@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package cosc457wiltondatabase.Main;
+import javax.swing.JTable;
 
 /**
  *
@@ -15,6 +16,7 @@ public class CustomerTable extends javax.swing.JFrame {
      */
     public CustomerTable() {
         initComponents();
+        populateCustomerTable();
     }
 
     /**
@@ -647,14 +649,20 @@ public class CustomerTable extends javax.swing.JFrame {
     }//GEN-LAST:event_CustomerButton1ActionPerformed
 
     private void BacktoInsert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BacktoInsert1ActionPerformed
-        // Create an instance of EmployeeTable and display it
-        Employee employee = new Employee();
-        employee.setVisible(true);
-
-        // Close the current Employee UI
+        Customer customer = new Customer();
+        customer.setVisible(true);
+        
         this.dispose();
     }//GEN-LAST:event_BacktoInsert1ActionPerformed
 
+    private void populateCustomerTable() {
+        CustomerShowTable customerTableShow = new CustomerShowTable();
+        JTable customerTable = new JTable(customerTableShow.getCustomerTableModel());
+        
+        // Set the JTable as the view for jScrollPane1EmployeeTableShow
+        jScrollPane1EmployeeTableShow1.setViewportView(customerTable);
+    }
+    
     /**
      * @param args the command line arguments
      */
