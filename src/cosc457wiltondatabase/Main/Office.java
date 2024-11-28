@@ -284,7 +284,7 @@ public class Office extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel4)
-                        .addGap(226, 226, 226)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel5)
@@ -425,7 +425,16 @@ public class Office extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5CancelButtonActionPerformed
 
     private void jButton6SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6SaveButtonActionPerformed
-
+        int idOffice = Integer.parseInt(jTextPane1LNameField.getText());
+        String fname = jTextPane4EmployeeIDField.getText();
+        String lName = jTextPane4EmployeeIDField1.getText();
+        int ssn = Integer.parseInt(jTextPane4EmployeeIDField2.getText());
+        
+        OfficeInsert officeInsert = new OfficeInsert();
+         officeInsert.insertOffice(idOffice, fname, lName, ssn);
+         
+          
+        javax.swing.JOptionPane.showMessageDialog(this, "Inserted into Office Successfully");
     }//GEN-LAST:event_jButton6SaveButtonActionPerformed
 
     private void employeePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePageActionPerformed
