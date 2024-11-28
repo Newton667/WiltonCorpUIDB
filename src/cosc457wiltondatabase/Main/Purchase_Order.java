@@ -41,17 +41,17 @@ public class Purchase_Order extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        POText = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        CID = new javax.swing.JTextPane();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        SaveButton = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jButtonShowTable2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        Description = new javax.swing.JTextArea();
         acceptButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -220,9 +220,9 @@ public class Purchase_Order extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 102)));
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(POText);
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(CID);
 
         jLabel16.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 102, 153));
@@ -232,12 +232,17 @@ public class Purchase_Order extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 102, 153));
         jLabel17.setText("Description");
 
-        jButton9.setBackground(new java.awt.Color(0, 102, 153));
-        jButton9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Save");
-        jButton9.setToolTipText("");
-        jButton9.setBorder(null);
+        SaveButton.setBackground(new java.awt.Color(0, 102, 153));
+        SaveButton.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        SaveButton.setForeground(new java.awt.Color(255, 255, 255));
+        SaveButton.setText("Save");
+        SaveButton.setToolTipText("");
+        SaveButton.setBorder(null);
+        SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveButtonActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(0, 102, 153));
         jButton10.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
@@ -266,9 +271,9 @@ public class Purchase_Order extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        Description.setColumns(20);
+        Description.setRows(5);
+        jScrollPane1.setViewportView(Description);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -287,7 +292,7 @@ public class Purchase_Order extends javax.swing.JFrame {
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(248, 248, 248)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(287, 287, 287)
                         .addComponent(jLabel17)))
@@ -327,7 +332,7 @@ public class Purchase_Order extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(70, 70, 70))))
         );
@@ -452,6 +457,18 @@ public class Purchase_Order extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_acceptButtonActionPerformed
 
+    private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
+        int POID = Integer.parseInt(POText.getText());
+        int Cust = Integer.parseInt(CID.getText());
+        String desc = Description.getText();
+        
+        Purchase_OrderInsert POInsert = new Purchase_OrderInsert();
+         POInsert.POInsert(POID, Cust, desc);
+         
+          
+        javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
+    }//GEN-LAST:event_SaveButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -489,15 +506,18 @@ public class Purchase_Order extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AssignTaskButton2;
+    private javax.swing.JTextPane CID;
     private javax.swing.JButton CustomerButton2;
+    private javax.swing.JTextArea Description;
     private javax.swing.JButton OrderItemButton2;
+    private javax.swing.JTextPane POText;
     private javax.swing.JButton PurchaseOrderButton2;
     private javax.swing.JButton SaleOrderButton2;
+    private javax.swing.JButton SaveButton;
     private javax.swing.JButton WorksOnButton2;
     private javax.swing.JButton acceptButton;
     private javax.swing.JButton employeePage2;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonShowTable2;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -511,9 +531,6 @@ public class Purchase_Order extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
     private javax.swing.JButton officeButton2;
     // End of variables declaration//GEN-END:variables
 }
