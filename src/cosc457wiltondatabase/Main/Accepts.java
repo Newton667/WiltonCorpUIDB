@@ -4,6 +4,8 @@
  */
 package cosc457wiltondatabase.Main;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Sara
@@ -106,6 +108,9 @@ public class Accepts extends javax.swing.JFrame {
         jButtonShowTable2 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
         ActionTextField = new javax.swing.JTextPane();
+        jLabel19 = new javax.swing.JLabel();
+        acceptSearch = new javax.swing.JTextField();
+        SearchAcceptEnter = new javax.swing.JToggleButton();
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -853,7 +858,7 @@ public class Accepts extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(employeePage2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(officeButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -964,64 +969,87 @@ public class Accepts extends javax.swing.JFrame {
 
         jScrollPane9.setViewportView(ActionTextField);
 
+        jLabel19.setFont(new java.awt.Font("Leelawadee UI", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel19.setText("Enter Office ID");
+
+        SearchAcceptEnter.setBackground(new java.awt.Color(0, 102, 153));
+        SearchAcceptEnter.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 18)); // NOI18N
+        SearchAcceptEnter.setForeground(new java.awt.Color(255, 255, 255));
+        SearchAcceptEnter.setText("Search");
+        SearchAcceptEnter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchAcceptEnterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63))
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel17))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(76, 76, 76)
+                                        .addComponent(jLabel16)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(45, 45, 45)
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(323, 323, 323)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(acceptSearch)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SearchAcceptEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 22, Short.MAX_VALUE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(248, 248, 248)
-                        .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(287, 287, 287)
-                        .addComponent(jLabel17)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(115, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(33, 33, 33))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(45, 45, 45)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(74, 74, 74)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17))
-                .addGap(136, 136, 136)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(70, 70, 70))))
+                        .addGap(7, 7, 7))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(acceptSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SearchAcceptEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(77, 77, 77)
+                .addComponent(jButtonShowTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -1152,7 +1180,9 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonShowTableActionPerformed
 
     private void OrderItemButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButton1ActionPerformed
-        // TODO add your handling code here:
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_OrderItemButton1ActionPerformed
 
     private void AssignTaskButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButton1ActionPerformed
@@ -1219,7 +1249,10 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_AssignTaskButton2ActionPerformed
 
     private void SaleOrderButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButton2ActionPerformed
-        // TODO add your handling code here:
+        Sales_Order SOBack = new Sales_Order();
+        SOBack.setVisible(true);
+
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButton2ActionPerformed
 
     private void officeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButton2ActionPerformed
@@ -1278,7 +1311,36 @@ public class Accepts extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(this, "Task Assigned Successfully");
     }//GEN-LAST:event_SaveActionPerformed
 
+    private void SearchAcceptEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchAcceptEnterActionPerformed
+        int OfficeID = Integer.parseInt(acceptSearch.getText());
+        
+        AcceptsSearch acceptsSearch = new AcceptsSearch();
+        DefaultTableModel model = acceptsSearch.getAcceptsSearchTable(OfficeID);
+        
+        showResultsInPopup(model);
+    }//GEN-LAST:event_SearchAcceptEnterActionPerformed
+
   
+    private void showResultsInPopup(DefaultTableModel model) {
+    // Create a JDialog for displaying the results
+    javax.swing.JDialog resultDialog = new javax.swing.JDialog(this, "Search Results", true);
+
+    // Create a JTable with the provided model
+    javax.swing.JTable resultTable = new javax.swing.JTable(model);
+
+    // Add the JTable to a JScrollPane for proper scrolling
+    javax.swing.JScrollPane scrollPane = new javax.swing.JScrollPane(resultTable);
+
+    // Add the scrollPane to the dialog
+    resultDialog.add(scrollPane);
+
+    // Set dialog size and position
+    resultDialog.setSize(600, 400);
+    resultDialog.setLocationRelativeTo(this); // Center the dialog relative to the main window
+
+    // Make the dialog visible
+    resultDialog.setVisible(true);
+}
     /**
      * @param args the command line arguments
      */
@@ -1334,9 +1396,11 @@ public class Accepts extends javax.swing.JFrame {
     private javax.swing.JButton SaleOrderButton1;
     private javax.swing.JButton SaleOrderButton2;
     private javax.swing.JButton Save;
+    private javax.swing.JToggleButton SearchAcceptEnter;
     private javax.swing.JButton WorksOnButton;
     private javax.swing.JButton WorksOnButton1;
     private javax.swing.JButton WorksOnButton2;
+    private javax.swing.JTextField acceptSearch;
     private javax.swing.JButton employeePage;
     private javax.swing.JButton employeePage1;
     private javax.swing.JButton employeePage2;
@@ -1360,6 +1424,7 @@ public class Accepts extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

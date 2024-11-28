@@ -6,7 +6,7 @@ package cosc457wiltondatabase.Main;
 
 /**
  *
- * @author newto
+ * @author Adam
  */
 
 import java.sql.*;

@@ -473,7 +473,11 @@ public class Employee extends javax.swing.JFrame {
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
-        // TODO add your handling code here:
+        Customer customer = new Customer();
+        customer.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
     /**
