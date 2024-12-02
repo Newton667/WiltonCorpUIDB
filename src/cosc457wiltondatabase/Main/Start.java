@@ -323,7 +323,9 @@ public class Start extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
@@ -378,7 +380,10 @@ public class Start extends javax.swing.JFrame {
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
-        // TODO add your handling code here:
+         Customer customer = new Customer();
+        customer.setVisible(true);
+        
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
     private void BacktoInsert2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BacktoInsert2ActionPerformed

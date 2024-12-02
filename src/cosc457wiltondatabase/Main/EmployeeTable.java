@@ -314,7 +314,9 @@ public class EmployeeTable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Order_Item orderitem = new Order_Item();
+        orderitem.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void AssignTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButtonActionPerformed
@@ -326,7 +328,10 @@ public class EmployeeTable extends javax.swing.JFrame {
     }//GEN-LAST:event_AssignTaskButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        Sales_Order SalesOrderBack = new Sales_Order();
+        SalesOrderBack.setVisible(true);
+        
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void employeePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePageActionPerformed
@@ -367,15 +372,24 @@ public class EmployeeTable extends javax.swing.JFrame {
     }//GEN-LAST:event_officeButtonActionPerformed
 
     private void PurchaseOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButtonActionPerformed
-        // TODO add your handling code here:
+        Purchase_Order PO_Back = new Purchase_Order();
+        PO_Back.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_PurchaseOrderButtonActionPerformed
 
     private void WorksOnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButtonActionPerformed
-        // TODO add your handling code here:
+        Works_On WorksOnBack = new Works_On();
+        WorksOnBack.setVisible(true);
+        
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_WorksOnButtonActionPerformed
 
     private void CustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButtonActionPerformed
-        // TODO add your handling code here:
+         Customer customer = new Customer();
+        customer.setVisible(true);
+        
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_CustomerButtonActionPerformed
 
     // Method to populate the JTable with employee data

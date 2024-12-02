@@ -1186,11 +1186,17 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_OrderItemButton1ActionPerformed
 
     private void AssignTaskButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButton1ActionPerformed
-        // TODO add your handling code here:
+        Assign_Task AssignTaskBack = new Assign_Task();
+        AssignTaskBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_AssignTaskButton1ActionPerformed
 
     private void SaleOrderButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaleOrderButton1ActionPerformed
-        // TODO add your handling code here:
+        Sales_Order SalesOrderBack = new Sales_Order();
+        SalesOrderBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_SaleOrderButton1ActionPerformed
 
     private void officeButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeButton1ActionPerformed
@@ -1212,15 +1218,24 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_employeePage1ActionPerformed
 
     private void PurchaseOrderButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButton1ActionPerformed
-        // TODO add your handling code here:
+        Purchase_Order PurchaseOrderBack = new Purchase_Order();
+        PurchaseOrderBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_PurchaseOrderButton1ActionPerformed
 
     private void WorksOnButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButton1ActionPerformed
-        // TODO add your handling code here:
+        Works_On WorksOnBack = new Works_On();
+        WorksOnBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_WorksOnButton1ActionPerformed
 
     private void CustomerButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButton1ActionPerformed
-        // TODO add your handling code here:
+        Customer CustomerBack = new Customer();
+        CustomerBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_CustomerButton1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -1237,7 +1252,10 @@ public class Accepts extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonShowTable1ActionPerformed
 
     private void OrderItemButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderItemButton2ActionPerformed
-        // TODO add your handling code here:
+        Order_Item OrderItemBack = new Order_Item();
+        OrderItemBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_OrderItemButton2ActionPerformed
 
     private void AssignTaskButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignTaskButton2ActionPerformed
@@ -1266,23 +1284,33 @@ public class Accepts extends javax.swing.JFrame {
 
     private void employeePage2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeePage2ActionPerformed
         // TODO add your handling code here:
-        Employee employeeBack = new Employee();
-        employeeBack.setVisible(true);
+        Office OfficeBack = new Office();
+        OfficeBack.setVisible(true);
 
         // Close the current Employee UI
         this.dispose();
     }//GEN-LAST:event_employeePage2ActionPerformed
 
     private void PurchaseOrderButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseOrderButton2ActionPerformed
-        // TODO add your handling code here:
+        Purchase_Order PO_Back = new Purchase_Order();
+        PO_Back.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_PurchaseOrderButton2ActionPerformed
 
     private void WorksOnButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WorksOnButton2ActionPerformed
-        // TODO add your handling code here:
+        Works_On WorksOnBack = new Works_On();
+        WorksOnBack.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_WorksOnButton2ActionPerformed
 
     private void CustomerButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerButton2ActionPerformed
-        // TODO add your handling code here:
+        Customer goToCustomer = new Customer();
+        goToCustomer.setVisible(true);
+
+        // Close the current Employee UI
+        this.dispose();
     }//GEN-LAST:event_CustomerButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
